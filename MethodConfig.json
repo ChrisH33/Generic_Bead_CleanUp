@@ -1,0 +1,122 @@
+{   
+
+    "Approved_Pipelines": ["IL2_PCR_XP"], 
+    "str1":[
+        "================================",
+        "       Pipeline Configs         ",
+        "================================"],
+    "IL2_PCR_XP": [{
+        "Labware": [{
+            "Bind_Plate_Type": ["Nunc 1ml 96 rd"],
+            "Source_Plate_Type": ["Eppendorf TwinTec"],
+            "Destination_Plate_Type": ["Eppendorf TwinTec"],
+            "Bead_Plate_Type": ["Nalgene"],
+            "Ethanol_Reservoir_Type": ["Nalgene"],
+            "Elution_Reservoir_Type": ["Nalgene"]
+        }],
+        "Processing_Details": [{
+            "Sample_Throughput": "96 MPH",
+            "CleanUp_In_Source_Plate": false,
+            "Filtered_Tips": false,
+            "Magnet_Type": ["Magnum FLX"],
+            "Max_Plate_Throughput": 2
+        }],
+        "Step1_Details": [{
+            "Bead_Volume": 35,
+            "Bead_Type": "SPRISelect",
+            "Liquid_Class": "StandardVolume_Water_DispenseJetEmpty96Head",
+            "Aspirate_Submerge_Depth": 0,
+            "Aspirate_Fix_Height": 1,
+            "Aspirate_Retract_Height": 25,
+            "Aspirate_Mix_Cycles": 1,
+            "Aspirate_Mix_Volume": 25,
+            "Dispense_Submerge_Depth": 0,
+            "Dispense_Fix_Height": 3,
+            "Dispense_Retract_Height": 5,
+            "Dispense_Mix_Cycles": 0,
+            "Dispense_Mix_Volume": 0
+        }],
+        "Step2_Details": [{
+            "DNAVolume": 50,
+            "Liquid_Class": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+            "Aspirate_Submerge_Depth": 0,
+            "Aspirate_Fix_Height": 0.2,
+            "Aspirate_Retract_Height": 5,
+            "Aspirate_Mix_Cycles": 1,
+            "Aspirate_Mix_Volume": 40,
+            "Dispense_Submerge_Depth": 0,
+            "Dispense_Fix_Height": 2,
+            "Dispense_Retract_Height": 5,
+            "Dispense_Mix_Cycles": 30,
+            "Dispense_Mix_Volume": 75
+        }],
+        "Step3_Details": [{
+            "Bind_Time": 60,
+            "HHS_Heat": 0,
+            "HHS_Shake": 0
+        }],
+        "Step4_Details": [{
+            "Pulldown_Time": 120
+        }],
+        "Step5_Details": [{
+            "Retain_Supernatant": false,
+            "Supernatant_Volume": 80,
+            "Liquid_Class": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+            "Aspirate_Submerge_Depth": 0,
+            "Aspirate_Fix_Height": 0.2,
+            "Aspirate_Retract_Height": 5,
+            "Aspirate_Mix_Cycles": 1,
+            "Aspirate_Mix_Volume": 40,
+            "Dispense_Fix_Height": 2,
+            "Dispense_Retract_Height": 5
+            }],
+        "Step6_Details": [{
+            "Wash_On_Magnet": true
+        }],
+        "Step7_Details": [{}],
+        "Step8_Details": [{}],
+        "Step9_Details": [{}],
+        "Step10_Details": [{}],
+        "Step11_Details": [{}],
+        "Bind_Details":[{
+            "Diluent_Top_Up_Vol": 0,
+            "Eluate_Liquid_Class": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+        }],
+        "Ethanol_Wash_Details": [{
+            "Cycles": 2,
+            "Ethanol_Concentration": "75%",
+            "Addition_Volume": 100,
+            "Addition_Liquid_Class": "",
+            "Addition_Aspirate_Height": 2,
+            "Addition_Dispense_Height": 2,
+            "Addition_Aspirate_Mix_Cycles": 0,
+            "Addition_Aspirate_Mix_Volume": 0,
+            "Addition_Dispense_Mix_Cycles": 0,
+            "Addition_Dispense_Mix_Volume": 0,
+            "Removal_Volume": 100,
+            "Removal_Liquid_Class": "",
+            "Removal_Aspirate_Height": 2,
+            "Removal_Dispense_Height": 2,
+            "Removal_Aspirate_Mix_Cycles": 0,
+            "Removal_Aspirate_Mix_Volume": 0
+        }],
+        "Drying_Details": [{
+            "Drying_Time": 60
+        }],
+        "Elution Details":[{
+            "Eluate": "Buffer EB",
+            "Heated_Elution": false,
+            "Heated_Elution_Temp": 0,
+            "Transfer_Beads_On_Elution": false,            
+            "Eluate_Addition": "",
+            "Eluate_Removal": "",
+            "Elution_Volume": 20,
+            "Elution_Recovery_Volume": 2
+        }]
+    }],
+    "str0":[
+        "================================",
+        "       Config Guide             ",
+        "================================"]
+
+}

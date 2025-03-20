@@ -1,9 +1,12 @@
- namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "load_instructions.hs_" } 
- namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
  namespace _Method { #include "ASWStandard\\TraceLevel\\TraceLevel.hsl" } 
  namespace _Method { #include "HSLStrLib.hsl" } 
+ namespace _Method { #include "WSI\\HSLJson_WSI\\JSONSearch.hs_" } 
+ namespace _Method { #include "HSLSeqLib.hsl" } 
 #include "GenericSPRI\\Layouts\\261B_Layout1.res"
+ namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
+ namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
+ namespace _Method { #include "HSLML_STARLib.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 variable CarrierArray[];
 variable intPlateCount;
@@ -12,6 +15,91 @@ variable intInputVolume;
 variable intNumberOfSourcePlates;
 variable intBeadVolume;
 variable intElutionVolume;
+dialog customDialog91ACFB55920D4f9683545054B7B95400;
+variable intBeadSample_Mix;
+variable intDNABeadBindingTime;
+variable intDNABeadPulldownTime;
+sequence seqTrp_BindPlates;
+sequence seqRes_BindingBeads;
+sequence seqPCR_SourcePlates;
+sequence seqDWP_BindOnMagnet;
+sequence seqDWP_BindPlates;
+sequence seqTrp_BindOnMagnet;
+sequence seqTips;
+sequence seqWaste;
+variable intTraceLevel;
+variable intWashCycles;
+variable strLC_BeadAddition;
+variable intBeadMixVolume;
+variable intBeadMixCycles;
+variable intAspirateHeight_Bead;
+variable intAspirateHeight_DNA;
+variable strLC_DNAAddition;
+variable intDNAMixVolume;
+variable intDNAMixCycles;
+variable intDispenseHeight_Bead;
+variable blnBindPlate;
+variable intDispenseMixVolume_DNA;
+variable intDispenseMixCycles_DNA;
+variable intAspirateMixCycles_Bead;
+variable intDNAVolume;
+variable intDispenseMixCycles_Bead;
+variable intAspirateMixVolume_DNA;
+variable intAspirateMixCycles_DNA;
+variable intDispenseHeight_DNA;
+variable intAspirateMixVolume_Bead;
+variable intDispenseMixVolume_Bead;
+variable blnSourcePlateCleanup;
+variable intDNABindTime;
+variable intDNABindPulldownTime;
+variable intDNABindShakeSpeed;
+variable intDNABindShakeTime;
+sequence seqTrp_BindOnHHS;
+variable blnDNABindShake;
+variable blnRetainSupernatant;
+variable strLC_SupernatantRemoval;
+variable blnSimMode;
+variable intSupernatantVolume;
+variable intDispenseHeight_Supernatant;
+variable intAspirateHeight_Supernatant;
+variable intAspirateMixVolume_Supernatant;
+variable intAspirateMixCycles_Supernatant;
+sequence seqSupernatantWaste;
+variable strLC_EthanolRemoval;
+variable intDispenseMixVolume_EthanolAdd;
+variable intDispenseMixCycles_EthanolAdd;
+variable intEthanolVolume_Removal;
+variable intAspirateMixVolume_EthanolRemoval;
+variable intAspirateMixCycles_EthanolRemoval;
+variable intDispenseHeight_EthanolRemoval;
+variable intDispenseHeight_EthanolAdd;
+variable intEthanolWashCycles;
+variable intEthanolVolume_Add;
+variable intAspirateHeight_EthanolAdd;
+variable strLC_EthanolAdd;
+variable intAspirateMixVolume_EthanolAdd;
+variable intAspirateMixCycles_EthanolAdd;
+variable intAspirateHeight_EthanolRemoval;
+sequence seqRes_WashBuffer;
+variable intBeadDryingTime;
+variable intAspirateSubmerge_Bead;
+variable intDispenseSubmerge_Bead;
+variable intAspirateRetract_Bead;
+variable intDispenseRetract_Bead;
+variable strLC_Bead;
+variable intDispenseSubmerge_DNA;
+variable intAspirateRetract_DNA;
+variable intAspirateSubmerge_DNA;
+variable intDispenseRetract_DNA;
+variable strLC_DNA;
+variable intBind_Temp;
+variable intBind_Shake;
+variable intBindPulldownTime;
+variable blnBind_HHS;
+variable intDispenseRetract_Supernatant;
+variable intAspirateRetract_Supernatant;
+variable intAspirateSubmerge_Supernatant;
+variable strLC_Supernatant;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -41,8 +129,9 @@ PTL::SetLoadingStateDefault("RecoveryOptionContinue", hslTrue);
 PTL::SetLoadingStateDefault("RecoveryOptionExclude", hslTrue);
 PTL::SetLoadingStateDefault("RecoveryOptionDefault", 0);
 PTL::SetLoadingStateDefault("KitLotCheckEnabled", hslFalse);
-CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 LOAD_INSTRUCTIONS::_InitLibrary();
+JSONSEARCH::_InitLibrary();
+CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 NTRDIRECTUSE_WGSPCRXP::_InitLibrary();
 ::RegisterAbortHandler( "OnAbort");
 // }} ""
@@ -58,59 +147,28 @@ NTRDIRECTUSE_WGSPCRXP::_InitLibrary();
 // {{{ 3 1 0 "8616ac11_fbf1_4fe8_8b88f78aa92617bd" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 A_UserInput();
 // }} ""
-// {{{ 4 1 0 "b1a6cad2_b054_49c8_a12b137da9b5b845" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-B_LoadInstructions();
-// }} ""
-// {{ 5 1 0 "747e1afa_9304_40df_8167937c04a84dfd" "{586C3429-F931-405f-9938-928E22C90BFA}"
-
-// }} ""
-// {{ 6 1 0 "37269b5a_15e1_4dc7_99f3b16478974522" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-CarrierArray.SetSize(0);
-// }} ""
-// {{ 7 1 0 "5ef45d78_28ec_42c7_ac3fca008c225de1" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("MFX_CAR_5NTR4_0001"));
-// }} ""
-// {{ 8 1 0 "77068048_0b68_432c_8a8ba73ad2d2d62c" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("MFX_CAR_5NTR4_0002"));
-// }} ""
-// {{ 9 1 0 "06e51a88_5359_4afa_be0547b814407910" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("MFX_CAR_5DWP_NestRB_0001"));
-// }} ""
-// {{ 10 1 0 "da127d77_70ef_4a15_8ad12b6d8ac87650" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("MFX_CAR_5DWP_NestRB_0002"));
-// }} ""
-// {{ 11 1 0 "8a86dbd1_cbe7_4705_8fe92ad0e0893dca" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("MFX_CAR_4DWP_NestRB_Tube_0001"));
-// }} ""
-// {{ 12 1 0 "ea58cfa1_dc22_40d3_9d06e84e8c87716a" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("RGT_CAR_5R60_A00_empty_0001"));
+// {{{ 4 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+B_CreateSequences();
 // }} ""
 /* {{ 1 "" "0" */ if(0){  /* }} "" */
-// {{ 13 1 0 "0ee60f98_d6fa_4be2_900ab3ff634698e9" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-CarrierArray.AddAsLast(Translate("SGC_MFX_CAR_HHSF30DWP_2DWP_NestRB_TipPark_0001"));
-// }} ""
-// {{{ 14 1 0 "a8a3cf84_579f_4a1d_bd329d8c47b06b36" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-CHECKCARRIERPRESENCEABSENCE::CheckCarriers(ML_STAR, CarrierArray);
+// {{{ 5 1 0 "27d619ec_decc_4c7b_ac7b2216561bf5b6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+C_LoadInstructions();
 // }} ""
 /* {{ 1 "" "1" */ } /* }} "" */
-// {{ 15 1 0 "747e1afa_9304_40df_8167937c04a84dfd" "{586C3429-F931-405f-9938-928E22C90BFA}"
-
+// {{{ 6 1 0 "a964eec2_4285_46d3_849b86ea48797204" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+D_PipettingSteps();
 // }} ""
-// {{{ 16 1 0 "447fd34f_6da6_4f0a_b03f54363af77aad" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-B_AMPure_Cleanup(ML_STAR.PCR_Source1_Epp_TwinTec, ML_STAR.PCR_Source2_Epp_TwinTec, ML_STAR.Bind_Plate_1_Nunc_1ml, ML_STAR.Bind_Plate_2_Nunc_1ml, ML_STAR.Bind_Plate_1_on_magnet_Nunc_1ml, ML_STAR.Bind_Plate_2_on_magnet_Nunc_1ml, ML_STAR.Waste_Abgene, ML_STAR.PCR_XP_Destination1_Epp_TwinTec, ML_STAR.PCR_XP_Destination2_Epp_TwinTec);
-// }} ""
-// {{{ 17 1 0 "4c678703_3cbc_4595_a81929f6a7d10ecc" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-LOAD_INSTRUCTIONS::load_instructions(ML_STAR, ML_STAR.Load_inst_Dest_Plates, Translate("The program is now complete. Seal your cleaned-up plates"));
-// }} ""
-// {{{ 18 1 0 "998f1259_98b7_4c74_99d57242901b3683" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-LOAD_INSTRUCTIONS::load_instructions(ML_STAR, ML_STAR.NTR_TIP_RACK_STACK, Translate("Remove all empty NTR racks and clean down the deck"));
+// {{ 7 1 0 "2a4362af_40b3_4564_ab742edad539605c" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialog91ACFB55920D4f9683545054B7B95400.InitCustomDialog( "2a4362af_40b3_4564_ab742edad539605c" );
+customDialog91ACFB55920D4f9683545054B7B95400.ShowCustomDialog();
 // }} ""
 // {{ 2 "AutoExitBlock" ""
-CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 LOAD_INSTRUCTIONS::_ExitLibrary();
+JSONSEARCH::_ExitLibrary();
+CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 NTRDIRECTUSE_WGSPCRXP::_ExitLibrary();
 // }} ""
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-03-17 15:59$$checksum=9116f83d$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-03-20 15:51$$checksum=3accb8b6$$length=083$$
