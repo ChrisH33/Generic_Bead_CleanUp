@@ -7,6 +7,17 @@ We're excited to introduce Generic_SPRI_CleanUp, a modular Hamilton method able 
 - **Easy Version Control**: By using this method for all clean-ups, it's easy to update methods and ensure every instrument is running the lasest version
 - **Pipeline Specificity**: The details of each pipeline run are contained within a JSON file, ensuring each run has the correct parameters for the samples it is processing.
 
+### Requirements
+- Hamilton VENUS 4.5.0.7977
+- Hamilton Libraries
+    - JSONSearch (https://github.com/ChrisH33/JSONSearch)
+    - load_instructions
+    - HSLML_STARLib
+    - HSLSeqLib
+    - HSLStrLib
+    - HslHamHeaterShakerLib
+    - TraceLevel
+
 ### Support
 
 For questions or support, contact Chris Henderson
