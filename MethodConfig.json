@@ -1,12 +1,12 @@
 {   
 
-    "Approved_Pipelines": ["IL2_PCR_XP"], 
+    "Approved_Pipelines": ["SGE - IL2_PCR_XP"], 
     "str1":[
         "================================",
         "       Pipeline Configs         ",
         "================================"],
-    "IL2_PCR_XP": [{
-        "Labware": [{
+    "SGE - IL2_PCR_XP": [{
+        "Labware_Details": [{
             "Bind_Plate_Type": ["Nunc 1ml 96 rd"],
             "Source_Plate_Type": ["Eppendorf TwinTec"],
             "Destination_Plate_Type": ["Eppendorf TwinTec"],
@@ -16,107 +16,276 @@
         }],
         "Processing_Details": [{
             "Sample_Throughput": "96 MPH",
-            "CleanUp_In_Source_Plate": false,
-            "Filtered_Tips": false,
-            "Magnet_Type": ["Magnum FLX"],
-            "Max_Plate_Throughput": 2
+            "blnFilteredTips": 0,
+            "strMagnetType": "Magnum FLX",
+            "intMaxPlateThroughput": 2
         }],
         "Step1_Details": [{
-            "Bead_Volume": 35,
-            "Bead_Type": "SPRISelect",
-            "Liquid_Class": "StandardVolume_Water_DispenseJetEmpty96Head",
-            "Aspirate_Submerge_Depth": 0,
-            "Aspirate_Fix_Height": 1,
-            "Aspirate_Retract_Height": 25,
-            "Aspirate_Mix_Cycles": 1,
-            "Aspirate_Mix_Volume": 25,
-            "Dispense_Submerge_Depth": 0,
-            "Dispense_Fix_Height": 3,
-            "Dispense_Retract_Height": 5,
-            "Dispense_Mix_Cycles": 0,
-            "Dispense_Mix_Volume": 0
+            "Step_Description": "----- TopUp DNA with Elution Buffer -----",
+
+            "blnTopUp": false,
+            "intTopUpVolume": 0,
+            "strLC_TopUp": "StandardVolume_Water_DispenseJetEmpty96Head",
+            "blnTopUp_Eject": false,
+
+            "intTopUp_AspLLD": 0,
+            "intTopUp_AspSubmerge": 0,
+            "intTopUp_AspHeight": 0,
+            "intTopUp_AspRetract": 0,
+            "intTopUp_AspFollowing": 0,
+            "intTopUp_AspMixCycles": 0,
+            "intTopUp_AspMixVolume": 0,
+
+            "intTopUp_DispLLD": 0,
+            "intTopUp_DispSubmerge": 0,
+            "intTopUp_DispHeight": 0,
+            "intTopUp_DispRetract": 0,
+            "intTopUp_DispFollowing": 0,
+            "intTopUp_DispMixCycles": 0,
+            "intTopUp_DispMixVolume": 0
         }],
         "Step2_Details": [{
-            "DNAVolume": 50,
-            "Liquid_Class": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
-            "Aspirate_Submerge_Depth": 0,
-            "Aspirate_Fix_Height": 0.2,
-            "Aspirate_Retract_Height": 5,
-            "Aspirate_Mix_Cycles": 1,
-            "Aspirate_Mix_Volume": 40,
-            "Dispense_Submerge_Depth": 0,
-            "Dispense_Fix_Height": 2,
-            "Dispense_Retract_Height": 5,
-            "Dispense_Mix_Cycles": 30,
-            "Dispense_Mix_Volume": 75
+            "Step_Description": "----- Transfer Beads -----",
+
+            "blnSourcePlateCleanup": false,
+            "intBeadVolume": 80,
+            "strBeadType": "SPRISelect",
+            "strLC_Bead": "StandardVolume_Water_DispenseJetEmpty96Head",
+            "blnBead_Eject": false,
+
+            "intBead_AspLLD": 1,
+            "intBead_AspSubmerge": 3,
+            "intBead_AspHeight": 0,
+            "intBead_AspRetract": 0,
+            "intBead_AspFollowing": 1,
+            "intBead_AspMixCycles": 10,
+            "intBead_AspMixVolume": 250,
+
+            "intBead_DispLLD": 0,
+            "intBead_DispSubmerge": 0,
+            "intBead_DispHeight": 8,
+            "intBead_DispRetract": 10,
+            "intBead_DispFollowing": 1,
+            "intBead_DispMixCycles": 0,
+            "intBead_DispMixVolume": 0
         }],
         "Step3_Details": [{
-            "Bind_Time": 60,
-            "HHS_Heat": 0,
-            "HHS_Shake": 0
+            "Step_Description": "----- Transfer DNA -----",
+
+            "intDNAVolume": 50,
+            "strLC_DNA": "StandardVolume_Water_DispenseJetEmpty96Head",
+
+            "intDNA_AspLLD": 0,
+            "intDNA_AspSubmerge": 0,
+            "intDNA_AspHeight": 0.5,
+            "intDNA_AspRetract": 5,
+            "intDNA_AspFollowing": 1,
+            "intDNA_AspMixCycles": 3,
+            "intDNA_AspMixVolume": 35,
+
+            "intDNA_DispLLD": 0,
+            "intDNA_DispSubmerge": 0,
+            "intDNA_DispHeight": 1,
+            "intDNA_DispRetract": 5,
+            "intDNA_DispFollowing": 1,
+            "intDNA_DispMixCycles": 10,
+            "intDNA_DispMixVolume": 130
         }],
         "Step4_Details": [{
-            "Pulldown_Time": 120
+            "Step_Description": "----- DNA-Bead Incubation -----",
+
+            "intDNABindTime": 300,
+            "blnBindOnHHS": false,
+            "intBind_Temp": 0,
+            "intBind_Shake": 0
         }],
         "Step5_Details": [{
-            "Retain_Supernatant": false,
-            "Supernatant_Volume": 80,
-            "Liquid_Class": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
-            "Aspirate_Submerge_Depth": 0,
-            "Aspirate_Fix_Height": 0.2,
-            "Aspirate_Retract_Height": 5,
-            "Aspirate_Mix_Cycles": 1,
-            "Aspirate_Mix_Volume": 40,
-            "Dispense_Fix_Height": 2,
-            "Dispense_Retract_Height": 5
-            }],
+            "Step_Description": "----- Bead Pulldown -----",
+
+            "intDNAPulldownTime": 270
+        }],
         "Step6_Details": [{
-            "Wash_On_Magnet": true
+            "Step_Description": "----- Remove Supernatant -----",
+
+            "blnRetainSupernatant": false,
+            "intSupernatantVolume": 80,
+            "strLC_Sup": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+
+            "intSup_AspLLD": 0,
+            "intSup_AspSubmerge": 0,
+            "intSup_AspHeight": 0.3,
+            "intSup_AspRetract": 5,
+            "intSup_AspFollowing": 1,
+            "intSup_AspMixCycles": 0,
+            "intSup_AspMixVolume": 0,
+
+            "intSup_DispLLD": 0,
+            "intSup_DispSubmerge": 0,
+            "intSup_DispHeight": 3,
+            "intSup_DispRetract": 5,
+            "intSup_DispFollowing": 0,
+            "intSup_DispMixCycles": 0,
+            "intSup_DispMixVolume": 0
         }],
-        "Step7_Details": [{}],
-        "Step8_Details": [{}],
-        "Step9_Details": [{}],
-        "Step10_Details": [{}],
-        "Step11_Details": [{}],
-        "Bind_Details":[{
-            "Diluent_Top_Up_Vol": 0,
-            "Eluate_Liquid_Class": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+        "Step7_Details": [{
+            "Step_Description": "----- Ethanol Washes -----",
+
+            "blnWashOnMagnet": true,
+            "intWashCycles": 2,
+
+            "intEthanolWashVolume": 180,
+            "strLC_EtOH": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+            "intEtOH_AspLLD": 0,
+            "intEtOH_AspSubmerge": 0,
+            "intEtOH_AspHeight": 1,
+            "intEtOH_AspRetract": 30,
+            "intEtOH_AspFollowing": 0,
+            "intEtOH_AspMixCycles": 0,
+            "intEtOH_AspMixVolume": 0,
+
+            "intEtOH_DispLLD": 0,
+            "intEtOH_DispSubmerge": 0,
+            "intEtOH_DispHeight": 15,
+            "intEtOH_DispRetract": 5,
+            "intEtOH_DispFollowing": 0,
+            "intEtOH_DispMixCycles": 0,
+            "intEtOH_DispMixVolume": 0,
+
+            "intEthanolRemovalVoume": 185,
+            "strLC_Wash": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+            "intWash_AspLLD": 0,
+            "intWash_AspSubmerge": 0,
+            "intWash_AspHeight": 1,
+            "intWash_AspRetract": 5,
+            "intWash_AspFollowing": 1,
+            "intWash_AspMixCycles": 0,
+            "intWash_AspMixVolume": 0,
+
+            "intWash_DispLLD": 1,
+            "intWash_DispSubmerge": 2,
+            "intWash_DispHeight": 0,
+            "intWash_DispRetract": 0,
+            "intWash_DispFollowing": 0,
+            "intWash_DispMixCycles": 0,
+            "intWash_DispMixVolume": 0
         }],
-        "Ethanol_Wash_Details": [{
-            "Cycles": 2,
-            "Ethanol_Concentration": "75%",
-            "Addition_Volume": 100,
-            "Addition_Liquid_Class": "",
-            "Addition_Aspirate_Height": 2,
-            "Addition_Dispense_Height": 2,
-            "Addition_Aspirate_Mix_Cycles": 0,
-            "Addition_Aspirate_Mix_Volume": 0,
-            "Addition_Dispense_Mix_Cycles": 0,
-            "Addition_Dispense_Mix_Volume": 0,
-            "Removal_Volume": 100,
-            "Removal_Liquid_Class": "",
-            "Removal_Aspirate_Height": 2,
-            "Removal_Dispense_Height": 2,
-            "Removal_Aspirate_Mix_Cycles": 0,
-            "Removal_Aspirate_Mix_Volume": 0
+        "Step8_Details": [{
+            "Step_Description": "----- Bead Drying -----",
+
+            "intBeadDryingTime": 120,
+            "blnDryOnHHS": false,
+            "intDry_Temp": 0,
+            "blnDryOnDeck": true,
+            "blnDryOnMagnet": false
         }],
-        "Drying_Details": [{
-            "Drying_Time": 60
+        "Step9_Details": [{
+            "Step_Description": "----- Add Eluate -----",
+
+            "strEluateType": "Buffer EB",
+            "blnEluateOnMagnet": false,
+            "strLC_Eluate": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+            "intEluateVolume": 30.5,
+
+            "intEluate_AspLLD": 0,
+            "intEluate_AspSubmerge": 0,
+            "intEluate_AspHeight": 4,
+            "intEluate_AspRetract": 10,
+            "intEluate_AspFollowing": 1,
+            "intEluate_AspMixCycles": 0,
+            "intEluate_AspMixVolume": 0,
+
+            "intEluate_DispLLD": 0,
+            "intEluate_DispSubmerge": 0,
+            "intEluate_DispHeight": 1,
+            "intEluate_DispRetract": 5,
+            "intEluate_DispFollowing": 1,
+            "intEluate_DispMixCycles": 20,
+            "intEluate_DispMixVolume": 22
         }],
-        "Elution Details":[{
-            "Eluate": "Buffer EB",
-            "Heated_Elution": false,
-            "Heated_Elution_Temp": 0,
-            "Transfer_Beads_On_Elution": false,            
-            "Eluate_Addition": "",
-            "Eluate_Removal": "",
-            "Elution_Volume": 20,
-            "Elution_Recovery_Volume": 2
+        "Step10_Details": [{
+            "Step_Description": "----- Eluate Incubation -----",
+
+            "intDNAEluteTime": 120,
+            "blnEluteOnHHS": false,
+            "intElute_Temp": 0,
+            "intElute_Shake": 0
+        }],
+        "Step11_Details": [{
+            "Step_Description": "----- Bead Pulldown -----",
+
+            "intBeadPulldownTime": 330,
+            "blnBeadPulldown": true
+        }],
+        "Step12_Details": [{
+            "Step_Description": "----- DNA Transfer -----",
+
+            "blnTipRinse": false,
+            "strLC_Recovery": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
+            "intRecoveryVolume": 30,
+
+            "intRecovery_AspLLD": 0,
+            "intRecovery_AspSubmerge": 0,
+            "intRecovery_AspHeight": 0.3,
+            "intRecovery_AspRetract": 5,
+            "intRecovery_AspFollowing": 0,
+            "intRecovery_AspMixCycles": 0,
+            "intRecovery_AspMixVolume": 0,
+
+            "intRecovery_DispLLD": 0,
+            "intRecovery_DispSubmerge": 0,
+            "intRecovery_DispHeight": 1,
+            "intRecovery_DispRetract": 5,
+            "intRecovery_DispFollowing": 1,
+            "intRecovery_DispMixCycles": 0,
+            "intRecovery_DispMixVolume": 0
         }]
     }],
     "str0":[
         "================================",
+        "   Labware Transport Config     ",
+        "================================"],
+    "Eppendorf TwinTec - #0030128656": [{
+        "intGripHeight": 4,
+        "intGripWidth": 79,
+        "intGripWidthOpen": 85,
+        "intGripForce": 5,
+        "intGripSpeed": 277.8,
+        "intZSpeed_Get": 128.7,
+        "intXAcceleration": 4,
+        "intZSpeed_Place": 128.7,
+        "intPlatePress": 1
+    }],
+    "Nunc 96DW Polystyrene - #278605": [{
+        "intGripHeight": 4,
+        "intGripWidth": 79,
+        "intGripWidthOpen": 85,
+        "intGripForce": 5,
+        "intGripSpeed": 277.8,
+        "intZSpeed_Get": 128.7,
+        "intXAcceleration": 4,
+        "intZSpeed_Place": 128.7,
+        "intPlatePress": 1
+    }],
+    "LabwareTypes": [{
+        "Nun_1ml_96_rd": "Nunc 96DW Polystyrene - #278605"
+    }],
+    "str2":[
+        "================================",
         "       Config Guide             ",
-        "================================"]
-
+        "================================"],
+    "Example Workflow": [{
+            "int__Submerge": "Immersion depth from the position where the liquid level is detected",
+            "int__Height": "Aspirate position with respect to the container bottom. Only active if 'int__Submerge = 0'",
+            "int__Retract": "Distance the tip will be retracted before the air transport volume is aspirated. Only active if 'int__Submerge = 0'",
+            "int__Following": "Tip following the liquid. 0 = off, 1 = on",
+            "int__MixCycles": "Number of mixing cycles",
+            "int__MixVolume": "Mixing volume",
+            "strLC": "Liquid class to be used for the transfer",
+            "int__Volume": "liquid volume to be transferred",
+            "int__BindTime": "Start a timer for this length of time",
+            "blnBindOn__": "Boolean value that triggers a plate transport. 0 = no, 1 = yes",
+            "int__Temp": "Temperature of the HHS",
+            "int__Shake": "Shaking speed of the HHS"
+        }]
+    
 }

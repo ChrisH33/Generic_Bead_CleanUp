@@ -1,24 +1,16 @@
  namespace _Method { #include "load_instructions.hs_" } 
  namespace _Method { #include "ASWStandard\\TraceLevel\\TraceLevel.hsl" } 
  namespace _Method { #include "HSLStrLib.hsl" } 
- namespace _Method { #include "WSI\\HSLJson_WSI\\JSONSearch.hs_" } 
+ namespace _Method { #include "WSI\\JSONSearch\\JSONSearch.hs_" } 
  namespace _Method { #include "HSLSeqLib.hsl" } 
 #include "GenericSPRI\\Layouts\\261B_Layout1.res"
+ namespace _Method { #include "HSLML_STARLib.hsl" } 
  namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
- namespace _Method { #include "HSLML_STARLib.hsl" } 
+ namespace _Method { #include "Hamilton Heater Shaker\\HslHamHeaterShakerLib.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
-variable CarrierArray[];
-variable intPlateCount;
 global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
-variable intInputVolume;
-variable intNumberOfSourcePlates;
-variable intBeadVolume;
-variable intElutionVolume;
 dialog customDialog91ACFB55920D4f9683545054B7B95400;
-variable intBeadSample_Mix;
-variable intDNABeadBindingTime;
-variable intDNABeadPulldownTime;
 sequence seqTrp_BindPlates;
 sequence seqRes_BindingBeads;
 sequence seqPCR_SourcePlates;
@@ -27,79 +19,172 @@ sequence seqDWP_BindPlates;
 sequence seqTrp_BindOnMagnet;
 sequence seqTips;
 sequence seqWaste;
-variable intTraceLevel;
-variable intWashCycles;
-variable strLC_BeadAddition;
-variable intBeadMixVolume;
-variable intBeadMixCycles;
-variable intAspirateHeight_Bead;
-variable intAspirateHeight_DNA;
-variable strLC_DNAAddition;
-variable intDNAMixVolume;
-variable intDNAMixCycles;
-variable intDispenseHeight_Bead;
-variable blnBindPlate;
-variable intDispenseMixVolume_DNA;
-variable intDispenseMixCycles_DNA;
-variable intAspirateMixCycles_Bead;
-variable intDNAVolume;
-variable intDispenseMixCycles_Bead;
-variable intAspirateMixVolume_DNA;
-variable intAspirateMixCycles_DNA;
-variable intDispenseHeight_DNA;
-variable intAspirateMixVolume_Bead;
-variable intDispenseMixVolume_Bead;
-variable blnSourcePlateCleanup;
-variable intDNABindTime;
-variable intDNABindPulldownTime;
-variable intDNABindShakeSpeed;
-variable intDNABindShakeTime;
 sequence seqTrp_BindOnHHS;
-variable blnDNABindShake;
-variable blnRetainSupernatant;
-variable strLC_SupernatantRemoval;
-variable blnSimMode;
-variable intSupernatantVolume;
-variable intDispenseHeight_Supernatant;
-variable intAspirateHeight_Supernatant;
-variable intAspirateMixVolume_Supernatant;
-variable intAspirateMixCycles_Supernatant;
 sequence seqSupernatantWaste;
-variable strLC_EthanolRemoval;
-variable intDispenseMixVolume_EthanolAdd;
-variable intDispenseMixCycles_EthanolAdd;
-variable intEthanolVolume_Removal;
-variable intAspirateMixVolume_EthanolRemoval;
-variable intAspirateMixCycles_EthanolRemoval;
-variable intDispenseHeight_EthanolRemoval;
-variable intDispenseHeight_EthanolAdd;
-variable intEthanolWashCycles;
-variable intEthanolVolume_Add;
-variable intAspirateHeight_EthanolAdd;
-variable strLC_EthanolAdd;
-variable intAspirateMixVolume_EthanolAdd;
-variable intAspirateMixCycles_EthanolAdd;
-variable intAspirateHeight_EthanolRemoval;
 sequence seqRes_WashBuffer;
-variable intBeadDryingTime;
-variable intAspirateSubmerge_Bead;
-variable intDispenseSubmerge_Bead;
-variable intAspirateRetract_Bead;
-variable intDispenseRetract_Bead;
-variable strLC_Bead;
-variable intDispenseSubmerge_DNA;
-variable intAspirateRetract_DNA;
-variable intAspirateSubmerge_DNA;
-variable intDispenseRetract_DNA;
-variable strLC_DNA;
+variable strLC_EtOH;
+variable strEluateType;
+variable intWash_DispRetract;
+variable intWash_AspSubmerge;
+variable intWash_AspMixVolume;
+variable intWash_AspMixCycles;
+variable intWash_AspHeight;
+variable intTopUp_DispMixVolume;
+variable intTopUp_AspRetract;
+variable intTopUp_AspLLD;
+variable intTopUp_AspHeight;
+variable intSupernatantVolume;
+variable intRecoveryVolume;
+variable intElute_Shake;
+variable intDNABindTime;
+variable blnDryOnDeck;
+variable intWash_AspRetract;
+variable intTopUp_DispMixCycles;
+variable intRecovery_DispLLD;
+variable intRecovery_AspRetract;
+variable intEthanolRemovalVoume;
+variable intDNA_DispRetract;
+variable intDNA_DispMixVolume;
+variable intDNA_DispMixCycles;
+variable intDNA_AspSubmerge;
+variable intSup_DispSubmerge;
+variable intEtOH_AspMixVolume;
+variable intEluate_AspHeight;
+variable intDNA_AspHeight;
+variable intRecovery_AspHeight;
+variable intMaxPlateThroughput;
+variable intEtOH_AspMixCycles;
+variable intDry_Temp;
+variable intDNA_AspLLD;
+variable intDNA_AspFollowing;
+variable intBead_DispLLD;
+variable blnRetainSupernatant;
+variable strLC_Sup;
+variable intRecovery_DispRetract;
+variable intRecovery_AspSubmerge;
+variable intElute_Temp;
+variable intEluate_DispMixVolume;
+variable intEluate_DispMixCycles;
+variable intEluate_DispHeight;
+variable intEluate_AspMixVolume;
+variable intEluate_AspMixCycles;
+variable intDNAVolume;
+variable intBead_DispMixVolume;
+variable intBead_DispMixCycles;
+variable intBead_AspFollowing;
+variable intWashCycles;
+variable intTopUp_AspFollowing;
+variable intRecovery_AspMixVolume;
+variable intRecovery_AspMixCycles;
+variable intEluate_DispLLD;
+variable intDNA_DispSubmerge;
+variable intBeadPulldownTime;
+variable blnSourcePlateCleanup;
+variable intSup_DispMixVolume;
+variable intSup_DispMixCycles;
+variable intRecovery_DispFollowing;
+variable intEtOH_DispFollowing;
+variable strLC_TopUp;
+variable intTopUp_DispSubmerge;
+variable intTopUpVolume;
+variable intSup_AspLLD;
+variable intEthanolWashVolume;
+variable intBead_DispSubmerge;
+variable intBead_DispHeight;
+variable blnDryOnHHS;
+variable blnBeadPulldown;
+variable strLC_Recovery;
+variable intWash_DispMixVolume;
+variable intWash_AspFollowing;
+variable intSup_AspMixVolume;
+variable intSup_AspMixCycles;
+variable intDNAPulldownTime;
 variable intBind_Temp;
+variable intWash_DispMixCycles;
+variable intTopUp_DispFollowing;
+variable intSup_DispHeight;
+variable intEtOH_DispLLD;
+variable intDNA_DispHeight;
+variable intDNA_DispFollowing;
 variable intBind_Shake;
-variable intBindPulldownTime;
-variable blnBind_HHS;
-variable intDispenseRetract_Supernatant;
-variable intAspirateRetract_Supernatant;
-variable intAspirateSubmerge_Supernatant;
-variable strLC_Supernatant;
+variable blnTipRinse;
+variable strLC_Wash;
+variable intWash_DispSubmerge;
+variable intEtOH_DispHeight;
+variable intEtOH_AspFollowing;
+variable intEluate_DispRetract;
+variable intEluate_AspSubmerge;
+variable intEluate_AspRetract;
+variable intEluateVolume;
+variable intBead_AspHeight;
+variable blnEluteOnHHS;
+variable intWash_AspLLD;
+variable intTopUp_DispHeight;
+variable intEluate_AspLLD;
+variable intDNAEluteTime;
+variable intBeadDryingTime;
+variable blnEluateOnMagnet;
+variable blnDryOnMagnet;
+variable intWash_DispHeight;
+variable intSup_DispLLD;
+variable intRecovery_DispHeight;
+variable intEluate_DispFollowing;
+variable intEluate_AspFollowing;
+variable intDNA_DispLLD;
+variable intDNA_AspMixVolume;
+variable intDNA_AspMixCycles;
+variable intBeadVolume;
+variable intBead_DispFollowing;
+variable blnBindOnHHS;
+variable intTopUp_DispLLD;
+variable intRecovery_AspFollowing;
+variable intEtOH_DispSubmerge;
+variable intEtOH_AspHeight;
+variable intBead_AspRetract;
+variable intBead_AspMixVolume;
+variable intBead_AspMixCycles;
+variable intTopUp_DispRetract;
+variable intTopUp_AspSubmerge;
+variable intTopUp_AspMixVolume;
+variable intTopUp_AspMixCycles;
+variable intSup_DispFollowing;
+variable intEtOH_DispRetract;
+variable intEtOH_AspSubmerge;
+variable intEluate_DispSubmerge;
+variable intBead_AspLLD;
+variable blnWashOnMagnet;
+variable blnFilteredTips;
+variable strLC_DNA;
+variable strLC_Bead;
+variable intWash_DispLLD;
+variable intSup_AspRetract;
+variable intSup_AspHeight;
+variable intRecovery_DispMixVolume;
+variable intRecovery_DispMixCycles;
+variable intEtOH_DispMixVolume;
+variable intDNA_AspRetract;
+variable strLC_Eluate;
+variable strBeadType;
+variable intWash_DispFollowing;
+variable intSup_DispRetract;
+variable intSup_AspSubmerge;
+variable intSup_AspFollowing;
+variable intRecovery_DispSubmerge;
+variable intRecovery_AspLLD;
+variable intEtOH_DispMixCycles;
+variable intEtOH_AspRetract;
+variable intEtOH_AspLLD;
+variable intBead_DispRetract;
+variable intBead_AspSubmerge;
+variable intSourcePlateNumber;
+variable blnSimMode;
+variable blnTopUp_Eject;
+variable blnTopUp;
+variable blnBead_Eject;
+sequence seqWashPlate;
+variable strMagnetType;
+variable strConfigFilePath;
+variable intPipelineChoice;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -150,17 +235,18 @@ A_UserInput();
 // {{{ 4 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 B_CreateSequences();
 // }} ""
-/* {{ 1 "" "0" */ if(0){  /* }} "" */
 // {{{ 5 1 0 "27d619ec_decc_4c7b_ac7b2216561bf5b6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 C_LoadInstructions();
 // }} ""
-/* {{ 1 "" "1" */ } /* }} "" */
 // {{{ 6 1 0 "a964eec2_4285_46d3_849b86ea48797204" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 D_PipettingSteps();
 // }} ""
 // {{ 7 1 0 "2a4362af_40b3_4564_ab742edad539605c" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
 customDialog91ACFB55920D4f9683545054B7B95400.InitCustomDialog( "2a4362af_40b3_4564_ab742edad539605c" );
 customDialog91ACFB55920D4f9683545054B7B95400.ShowCustomDialog();
+// }} ""
+// {{{ 8 1 0 "dd6342e5_3cc2_4ee9_83f4d37a47350fc6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+HSLHamHeaterShaker::Terminate();
 // }} ""
 // {{ 2 "AutoExitBlock" ""
 LOAD_INSTRUCTIONS::_ExitLibrary();
@@ -171,4 +257,4 @@ NTRDIRECTUSE_WGSPCRXP::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-03-20 15:51$$checksum=3accb8b6$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-05-23 17:20$$checksum=3895a8fe$$length=083$$
