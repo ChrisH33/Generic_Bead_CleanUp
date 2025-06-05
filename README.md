@@ -25,9 +25,9 @@ Adding new methods or labware should not require any modification to the Hamilto
 To add new methods:
 1. Copy the template from 'MethodTemplate.json' into the 'Pipeline Config' section of the MethodConfig.
 2. Replace all of the temporary values with values appropriate to your workflow.
-    a. Do not rename any of the properties, as this is what the Hamilton method uses to find the correct value.
-    b. It is recommended you do this a text editor that comprehends .json files, as it will be much easier to identify mistakes.
-3. Add the name of your workflow to "Approved_Pipelines" at the top of the MethodConfig.
+    - Do not rename any of the properties, as this is what the Hamilton method uses to find the correct value.
+    - It is recommended you do this a text editor that comprehends .json files, as it will be much easier to identify mistakes.
+5. Add the name of your workflow to "Approved_Pipelines" at the top of the MethodConfig.
 
 
 ### Support
