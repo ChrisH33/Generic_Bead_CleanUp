@@ -1,11 +1,5 @@
-{   
-
-    "Approved_Pipelines": ["SGE - IL2_PCR_XP", "Ultima - BakeOff"], 
-    "str1":[
-        "================================",
-        "         Pipeline Configs       ",
-        "================================"],
-    "SGE - IL2_PCR_XP": [{
+{
+"--WorkflowName--": [{
         "Labware_Details": [{
             "Bind_Plate_Type": ["Nunc 96DW Polystyrene - #278605"],
             "Source_Plate_Type": ["Eppendorf TwinTec - #0030128656"],
@@ -21,7 +15,7 @@
         }],
         "Step1_Details": [{
             "Step_Description": "----- TopUp DNA with Elution Buffer -----",
-            "blnTopUp": false,
+            "blnTopUp": "--TrueOrFalse--",
             "intTopUpVolume": 0,
             "strLC_TopUp": "StandardVolume_Water_DispenseJetEmpty96Head",
             "blnTopUp_Eject": false,
@@ -155,58 +149,5 @@
             "intRecovery_DispLLD": 0, "intRecovery_DispSubmerge": 0, "intRecovery_DispHeight": 1, "intRecovery_DispRetract": 5,
             "intRecovery_DispFollowing": 1, "intRecovery_DispMixCycles": 0, "intRecovery_DispMixVolume": 0
         }]
-    }],
-    "str0":[
-        "================================",
-        "   Labware Transport Config     ",
-        "================================"],
-    "Eppendorf TwinTec - #0030128656": [{
-        "intGripHeight": 4,
-        "intGripWidth": 79,
-        "intGripWidthOpen": 85,
-        "intGripForce": 5,
-        "intGripSpeed": 277.8,
-        "intZSpeed_Get": 128.7,
-        "intXAcceleration": 4,
-        "intZSpeed_Place": 128.7,
-        "intPlatePress": 1
-    }],
-    "Nunc 96DW Polystyrene - #278605": [{
-        "intGripHeight": 10,
-        "intGripWidth": 79,
-        "intGripWidthOpen": 85,
-        "intGripForce": 5,
-        "intGripSpeed": 277.8,
-        "intZSpeed_Get": 128.7,
-        "intXAcceleration": 4,
-        "intZSpeed_Place": 128.7,
-        "intPlatePress": 1
-    }],
-    "LabwareTypes": [{
-        "Nun_1ml_96_rd": "Nunc 96DW Polystyrene - #278605"
-    }],
-    "str3":[
-        "================================",
-        "         System Config          ",
-        "================================"],
-    "SN593B": [{}],
-    "str2":[
-        "================================",
-        "          Config Guide          ",
-        "================================"],
-    "Example Workflow": [{
-            "int__Submerge": "Immersion depth from the position where the liquid level is detected",
-            "int__Height": "Aspirate position with respect to the container bottom. Only active if 'int__Submerge = 0'",
-            "int__Retract": "Distance the tip will be retracted before the air transport volume is aspirated. Only active if 'int__Submerge = 0'",
-            "int__Following": "Tip following the liquid. 0 = off, 1 = on",
-            "int__MixCycles": "Number of mixing cycles",
-            "int__MixVolume": "Mixing volume",
-            "strLC": "Liquid class to be used for the transfer",
-            "int__Volume": "liquid volume to be transferred",
-            "int__BindTime": "Start a timer for this length of time",
-            "blnBindOn__": "Boolean value that triggers a plate transport. 0 = no, 1 = yes",
-            "int__Temp": "Temperature of the HHS",
-            "int__Shake": "Shaking speed of the HHS"
-        }]
-    
+    }]
 }

@@ -3,11 +3,11 @@
  namespace _Method { #include "HSLStrLib.hsl" } 
  namespace _Method { #include "WSI\\JSONSearch\\JSONSearch.hs_" } 
  namespace _Method { #include "HSLSeqLib.hsl" } 
-#include "GenericSPRI\\Layouts\\261B_Layout1.res"
  namespace _Method { #include "HSLML_STARLib.hsl" } 
  namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
- namespace _Method { #include "Hamilton Heater Shaker\\HslHamHeaterShakerLib.hsl" } 
+ namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
+#include "GenericSPRI\\Layouts\\261B_Layout1.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
 dialog customDialog91ACFB55920D4f9683545054B7B95400;
@@ -185,6 +185,53 @@ sequence seqWashPlate;
 variable strMagnetType;
 variable strConfigFilePath;
 variable intPipelineChoice;
+variable intCOREChannel;
+variable blnDoubleSided;
+sequence seqDWP_BindPlates2;
+dialog customDialogCEBEF4F2B34042e6B1374AC5360EF2CF;
+variable strLC_SupTrans;
+variable intBead2_AspHeight;
+variable intSupTrans_AspHeight;
+variable blnBead2_Eject;
+variable intSupTrans_AspRetract;
+variable intBead2Volume;
+variable blnBind2OnHHS;
+variable intSupTrans_DispFollowing;
+variable intSupTrans_AspMixVolume;
+variable blnSupTrans_Eject;
+variable intSupTrans_DispRetract;
+variable intSupTrans_AspSubmerge;
+variable intSupTrans_AspMixCycles;
+variable intBead2_DispHeight;
+variable intBead2_DispFollowing;
+variable intBead2_AspFollowing;
+variable strLC_Bead2;
+variable strBead2Type;
+variable intBead2_DispSubmerge;
+variable intDNAPulldown2Time;
+variable intBead2_AspLLD;
+variable intSupTrans_AspLLD;
+variable intBind2_Shake;
+variable intBead2_AspRetract;
+variable intSupTrans_AspFollowing;
+variable blnDNA_Eject;
+variable intSupTransVolume;
+variable intSupTrans_DispMixVolume;
+variable intSupTrans_DispMixCycles;
+variable intSupTrans_DispHeight;
+variable intBead2_DispLLD;
+variable intDNABind2Time;
+variable intBind2_Temp;
+variable intBead2_DispMixVolume;
+variable intBead2_DispMixCycles;
+variable intSupTrans_DispSubmerge;
+variable intSupTrans_DispLLD;
+variable intBead2_DispRetract;
+variable intBead2_AspSubmerge;
+variable intBead2_AspMixVolume;
+variable intBead2_AspMixCycles;
+sequence seqRes_BindingBeads2;
+sequence seqTrp_BindPlates2;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -241,9 +288,9 @@ C_LoadInstructions();
 // {{{ 6 1 0 "a964eec2_4285_46d3_849b86ea48797204" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 D_PipettingSteps();
 // }} ""
-// {{ 7 1 0 "2a4362af_40b3_4564_ab742edad539605c" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
-customDialog91ACFB55920D4f9683545054B7B95400.InitCustomDialog( "2a4362af_40b3_4564_ab742edad539605c" );
-customDialog91ACFB55920D4f9683545054B7B95400.ShowCustomDialog();
+// {{ 7 1 0 "d812a1d2_a8a0_4eec_b9047f81596fda88" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "d812a1d2_a8a0_4eec_b9047f81596fda88" );
+customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.ShowCustomDialog();
 // }} ""
 // {{{ 8 1 0 "dd6342e5_3cc2_4ee9_83f4d37a47350fc6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 HSLHamHeaterShaker::Terminate();
@@ -257,4 +304,4 @@ NTRDIRECTUSE_WGSPCRXP::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-05-23 17:20$$checksum=3895a8fe$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-06-05 17:26$$checksum=d5fcdf3b$$length=083$$

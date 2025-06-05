@@ -1,7 +1,7 @@
 # GenericSPRI
-One of the challenges in laboratory automation is standardising methods to a validated framework. Without a comprehensive framework, new methods proliferate and expand the remit of automation teams. These methods are functionally identical, with only slight differences in pipetting volumes or mix cycles. 
+One challenge facing laboratory automation is standardising methods. Without a clear framework, new methods proliferate and expand the remit of automation teams. These methods are functionally identical, with only slight differences in pipetting volumes or mix cycles. 
 
-We're excited to introduce Generic_SPRI_CleanUp, a modular Hamilton method able to perform a wide range of bead-based purification steps. This is the Wellcome Sanger Institite's first attempt at standardising a collection of functionally identical but distinct Hamilton methods into one unified, validated method.
+This method aims to address that problem. We have developed a flexible Hamilton method that is capable of performing a range of bead-based cleanups.
 
 ### Features
 - **Easy Version Control**: By using this method for all clean-ups, it's easy to update methods and ensure every instrument is running the lasest version
@@ -11,6 +11,7 @@ We're excited to introduce Generic_SPRI_CleanUp, a modular Hamilton method able 
 - Hamilton VENUS 4.5.0.7977
 - Hamilton Libraries
     - JSONSearch (https://github.com/ChrisH33/JSONSearch)
+        - FindDBPath (https://github.com/ChrisH33/FindDBPath)
     - load_instructions
     - HSLML_STARLib
     - HSLSeqLib
@@ -18,9 +19,19 @@ We're excited to introduce Generic_SPRI_CleanUp, a modular Hamilton method able 
     - HslHamHeaterShakerLib
     - TraceLevel
 
-### Support
+### Adding new Workflows
+Adding new methods or labware should not require any modification to the Hamilton method. All of the variables you might want to change can be found in 'MethodConfig.json'
 
-For questions or support, contact Chris Henderson
+To add new methods:
+1. Copy the template from 'MethodTemplate.json' into the 'Pipeline Config' section of the MethodConfig.
+2. Replace all of the temporary values with values appropriate to your workflow.
+    a. Do not rename any of the properties, as this is what the Hamilton method uses to find the correct value.
+    b. It is recommended you do this a text editor that comprehends .json files, as it will be much easier to identify mistakes.
+3. Add the name of your workflow to "Approved_Pipelines" at the top of the MethodConfig.
+
+
+### Support
+For questions or support, please contact Chris Henderson
 
     Email: ch33@sanger.ac.uk
     GitHub: ChrisH33
