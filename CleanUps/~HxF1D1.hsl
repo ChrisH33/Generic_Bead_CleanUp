@@ -7,7 +7,7 @@
  namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
-#include "GenericSPRI\\Layouts\\261B_Layout1.res"
+#include "~ReC13A.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
@@ -301,4 +301,4 @@ NTRDIRECTUSE_WGSPCRXP::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-06-06 11:48$$checksum=a66cd2d9$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-06-06 11:48$$checksum=a9584c20$$length=083$$
