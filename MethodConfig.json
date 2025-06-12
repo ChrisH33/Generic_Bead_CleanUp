@@ -1,23 +1,24 @@
 {   
-
-    "Approved_Pipelines": ["SGE - IL2_PCR_XP", "Ultima - BakeOff"], 
+    "Approved_Pipelines": ["SGE - IL2_PCR_XP", "Ultima - BakeOff", "RNA LE SPRI"], 
     "str1":[
         "================================",
         "         Pipeline Configs       ",
         "================================"],
     "SGE - IL2_PCR_XP": [{
         "Labware_Details": [{
-            "Bind_Plate_Type": ["Nunc 96DW Polystyrene - #278605"],
+            "Bind_Plate_Type": ["Nunc 96DW Polystyrene - #278605", "Biorad plate"],
             "Source_Plate_Type": ["Eppendorf TwinTec - #0030128656"],
             "Destination_Plate_Type": ["Eppendorf TwinTec - #0030128656"],
-            "Bead_Plate_Type": ["Nalgene"],
-            "Ethanol_Reservoir_Type": ["Nalgene"],
-            "Elution_Reservoir_Type": ["Nalgene"]
+            "Bead_Plate_Type": ["Nalgene FlatBottom - #1200-1301"],
+            "Bead2_Plate_Type": ["Nalgene FlatBottom - #1200-1301"],
+            "EtOH_Elution_Reservoir_Type": ["Nalgene FlatBottom - #1200-1301"],
+            "Magnet_Type": ["Alpaqua Magnum FLX - A000600"]
         }],
         "Processing_Details": [{
-            "strMagnetType": "Magnum FLX",
             "intMaxPlateThroughput": 2,
-            "blnDoubleSided": false
+            "blnDoubleSided": false,
+            "strTipType": "300uLNTRs",
+            "strPipettingTool": "96MPH"
         }],
         "Step1_Details": [{
             "Step_Description": "----- TopUp DNA with Elution Buffer -----",
@@ -156,9 +157,163 @@
             "intRecovery_DispFollowing": 1, "intRecovery_DispMixCycles": 0, "intRecovery_DispMixVolume": 0
         }]
     }],
-    "str0":[
+    "RNA LE SPRI": [{
+        "Labware_Details": [{
+            "Bind_Plate_Type": [""],
+            "Source_Plate_Type": [""],
+            "Destination_Plate_Type": [""],
+            "Bead_Plate_Type": [""],
+            "Bead2_Plate_Type": [""],
+            "EtOH_Elution_Reservoir_Type": [""],
+            "Magnet_Type": ["Alpaqua 96S Super - A001322"]
+        }],
+        "Processing_Details": [{
+            "intMaxPlateThroughput": "?????",
+            "blnDoubleSided": "?????",
+            "strTipType": "300uLNTRs",
+            "strPipettingTool": "96MPH"
+        }],
+        "Step1_Details": [{
+            "Step_Description": "----- TopUp DNA with Elution Buffer -----",
+            "blnTopUp": "?????",
+            "intTopUpVolume": "?????",
+            "strLC_TopUp": "?????",
+            "blnTopUp_Eject": "?????",
+            "intTopUp_AspLLD": "?????", "intTopUp_AspSubmerge": "?????", "intTopUp_AspHeight": "?????", "intTopUp_AspRetract": "?????",
+            "intTopUp_AspFollowing": "?????", "intTopUp_AspMixCycles": "?????", "intTopUp_AspMixVolume": "?????",
+            "intTopUp_DispLLD": "?????", "intTopUp_DispSubmerge": "?????", "intTopUp_DispHeight": "?????", "intTopUp_DispRetract": "?????",
+            "intTopUp_DispFollowing": "?????", "intTopUp_DispMixCycles": "?????", "intTopUp_DispMixVolume": "?????"
+        }],
+        "Step2_Details": [{
+            "Step_Description": "----- Transfer Beads -----",
+            "blnSourcePlateCleanup": "?????",
+            "intBeadVolume": "?????",
+            "strBeadType": "?????",
+            "strLC_Bead": "?????",
+            "blnBead_Eject": "?????",
+            "intBead_AspLLD": "?????", "intBead_AspSubmerge": "?????", "intBead_AspHeight": "?????", "intBead_AspRetract": "?????",
+            "intBead_AspFollowing": "?????", "intBead_AspMixCycles": "?????", "intBead_AspMixVolume": "?????",
+            "intBead_DispLLD": "?????", "intBead_DispSubmerge": "?????", "intBead_DispHeight": "?????", "intBead_DispRetract": "?????",
+            "intBead_DispFollowing": "?????", "intBead_DispMixCycles": "?????", "intBead_DispMixVolume": "?????"
+        }],
+        "Step3_Details": [{
+            "Step_Description": "----- Transfer DNA -----",
+            "intDNAVolume": "?????",
+            "strLC_DNA": "?????",
+            "blnDNA_Eject": "?????",
+            "intDNA_AspLLD": "?????", "intDNA_AspSubmerge": "?????", "intDNA_AspHeight": "?????", "intDNA_AspRetract": "?????",
+            "intDNA_AspFollowing": "?????", "intDNA_AspMixCycles": "?????", "intDNA_AspMixVolume": "?????",
+            "intDNA_DispLLD": "?????", "intDNA_DispSubmerge": "?????", "intDNA_DispHeight": "?????", "intDNA_DispRetract": "?????",
+            "intDNA_DispFollowing": "?????", "intDNA_DispMixCycles": "?????", "intDNA_DispMixVolume": "?????"
+        }],
+        "Step4_Details": [{
+            "Step_Description": "----- DNA-Bead Incubation -----",
+            "intDNABindTime": "?????",
+            "blnBindOnHHS": "?????", "intBind_Temp": "?????", "intBind_Shake": "?????"
+        }],
+        "Step5_Details": [{
+            "Step_Description": "----- Bead Pulldown -----",
+            "intDNAPulldownTime": "?????"
+        }],
+        "Step6_Details": [{
+            "Step_Description": "----- Transfer Second Beads -----",
+            "intBead2Volume": "?????",
+            "strBead2Type": "?????",
+            "strLC_Bead2": "?????",
+            "blnBead2_Eject": "?????",
+            "intBead2_AspLLD": "?????", "intBead2_AspSubmerge": "?????", "intBead2_AspHeight": "?????", "intBead2_AspRetract": "?????",
+            "intBead2_AspFollowing": "?????", "intBead2_AspMixCycles": "?????", "intBead2_AspMixVolume": "?????",
+            "intBead2_DispLLD": "?????", "intBead2_DispSubmerge": "?????", "intBead2_DispHeight": "?????", "intBead2_DispRetract": "?????",
+            "intBead2_DispFollowing": "?????", "intBead2_DispMixCycles": "?????", "intBead2_DispMixVolume": "?????"
+        }],
+        "Step7_Details": [{
+            "Step_Description": "----- Transfer Supernatant -----",
+            "intSupTransVolume": "?????",
+            "strLC_SupTrans": "?????",
+            "intSupTrans_AspLLD": "?????", "intSupTrans_AspSubmerge": "?????", "intSupTrans_AspHeight": "?????", "intSupTrans_AspRetract": "?????",
+            "intSupTrans_AspFollowing": "?????", "intSupTrans_AspMixCycles": "?????", "intSupTrans_AspMixVolume": "?????",
+            "intSupTrans_DispLLD": "?????", "intSupTrans_DispSubmerge": "?????", "intSupTrans_DispHeight": "?????", "intSupTrans_DispRetract": "?????",
+            "intSupTrans_DispFollowing": "?????", "intSupTrans_DispMixCycles": "?????", "intSupTrans_DispMixVolume": "?????"
+        }],
+        "Step8_Details": [{
+            "Step_Description": "----- DNA-Bead Incubation -----",
+            "intDNABind2Time": "?????",
+            "blnBind2OnHHS": "?????", "intBind2_Temp": "?????", "intBind2_Shake": "?????"
+        }],
+        "Step9_Details": [{
+            "Step_Description": "----- Bead Pulldown -----",
+            "intDNAPulldown2Time": "?????"
+        }],
+        "Step10_Details": [{
+            "Step_Description": "----- Remove Supernatant -----",
+            "blnRetainSupernatant": "?????",
+            "intSupernatantVolume": "?????",
+            "strLC_Sup": "?????",
+            "intSup_AspLLD": "?????", "intSup_AspSubmerge": "?????", "intSup_AspHeight": "?????", "intSup_AspRetract": "?????",
+            "intSup_AspFollowing": "?????", "intSup_AspMixCycles": "?????", "intSup_AspMixVolume": "?????",
+            "intSup_DispLLD": "?????", "intSup_DispSubmerge": "?????", "intSup_DispHeight": "?????", "intSup_DispRetract": "?????",
+            "intSup_DispFollowing": "?????", "intSup_DispMixCycles": "?????", "intSup_DispMixVolume": "?????"
+        }],
+        "Step11_Details": [{
+            "Step_Description": "----- Ethanol Washes -----",
+            "blnWashOnMagnet": "?????",
+            "intWashCycles": "?????",
+            "intEthanolWashVolume": "?????",
+            "strLC_EtOH": "?????",
+            "intEtOH_AspLLD": "?????", "intEtOH_AspSubmerge": "?????", "intEtOH_AspHeight": "?????", "intEtOH_AspRetract": "?????",
+            "intEtOH_AspFollowing": "?????", "intEtOH_AspMixCycles": "?????", "intEtOH_AspMixVolume": "?????",
+            "intEtOH_DispLLD": "?????", "intEtOH_DispSubmerge": "?????", "intEtOH_DispHeight": "?????", "intEtOH_DispRetract": "?????",
+            "intEtOH_DispFollowing": "?????", "intEtOH_DispMixCycles": "?????", "intEtOH_DispMixVolume": "?????",
+            "intEthanolRemovalVoume": "?????",
+            "strLC_Wash": "?????",
+            "intWash_AspLLD": "?????", "intWash_AspSubmerge": "?????", "intWash_AspHeight": "?????", "intWash_AspRetract": "?????",
+            "intWash_AspFollowing": "?????", "intWash_AspMixCycles": "?????", "intWash_AspMixVolume": "?????",
+            "intWash_DispLLD": "?????", "intWash_DispSubmerge": "?????", "intWash_DispHeight": "?????", "intWash_DispRetract": "?????",
+            "intWash_DispFollowing": "?????", "intWash_DispMixCycles": "?????", "intWash_DispMixVolume": "?????"
+        }],
+        "Step12_Details": [{
+            "Step_Description": "----- Bead Drying -----",
+            "intBeadDryingTime": "?????",
+            "blnDryOnHHS": "?????", "intDry_Temp": "?????",
+            "blnDryOnDeck": "?????",
+            "blnDryOnMagnet": "?????"
+        }],
+        "Step13_Details": [{
+            "Step_Description": "----- Add Eluate -----",
+            "strEluateType": "?????",
+            "blnEluateOnMagnet": "?????",
+            "strLC_Eluate": "?????",
+            "intEluateVolume": "?????",
+            "intEluate_AspLLD": "?????", "intEluate_AspSubmerge": "?????", "intEluate_AspHeight": "?????", "intEluate_AspRetract": "?????",
+            "intEluate_AspFollowing": "?????", "intEluate_AspMixCycles": "?????", "intEluate_AspMixVolume": "?????",
+            "intEluate_DispLLD": "?????", "intEluate_DispSubmerge": "?????", "intEluate_DispHeight": "?????", "intEluate_DispRetract": "?????",
+            "intEluate_DispFollowing": "?????", "intEluate_DispMixCycles": "?????", "intEluate_DispMixVolume": "?????"
+        }],
+        "Step14_Details": [{
+            "Step_Description": "----- Eluate Incubation -----",
+            "intDNAEluteTime": "?????",
+            "blnEluteOnHHS": "?????", "intElute_Temp": "?????", "intElute_Shake": "?????"
+        }],
+        "Step15_Details": [{
+            "Step_Description": "----- Bead Pulldown -----",
+            "intBeadPulldownTime": "?????",
+            "blnBeadPulldown": "?????"
+        }],
+        "Step16_Details": [{
+            "Step_Description": "----- DNA Transfer -----",
+            "blnTipRinse": "?????",
+            "strLC_Recovery": "?????",
+            "intRecoveryVolume": "?????",
+            "intRecovery_AspLLD": "?????", "intRecovery_AspSubmerge": "?????", "intRecovery_AspHeight": "?????", "intRecovery_AspRetract": "?????",
+            "intRecovery_AspFollowing": "?????", "intRecovery_AspMixCycles": "?????", "intRecovery_AspMixVolume": "?????",
+            "intRecovery_DispLLD": "?????", "intRecovery_DispSubmerge": "?????", "intRecovery_DispHeight": "?????", "intRecovery_DispRetract": "?????",
+            "intRecovery_DispFollowing": "?????", "intRecovery_DispMixCycles": "?????", "intRecovery_DispMixVolume": "?????"
+        }]
+    }],
+
+    "str2":[
         "================================",
-        "   Labware Transport Config     ",
+        "        Labware Config          ",
         "================================"],
     "Eppendorf TwinTec - #0030128656": [{
         "intGripHeight": 4,
@@ -169,7 +324,8 @@
         "intZSpeed_Get": 128.7,
         "intXAcceleration": 4,
         "intZSpeed_Place": 128.7,
-        "intPlatePress": 1
+        "intPlatePress": 1,
+        "offsets": [0,0,0]
     }],
     "Nunc 96DW Polystyrene - #278605": [{
         "intGripHeight": 10,
@@ -180,33 +336,47 @@
         "intZSpeed_Get": 128.7,
         "intXAcceleration": 4,
         "intZSpeed_Place": 128.7,
-        "intPlatePress": 1
+        "intPlatePress": 1,
+        "offsets": [0,0,0]
     }],
+    "Nalgene FlatBottom - #1200-1301": [{"offsets": [0,0,0]}],
+    "Alpaqua Magnum FLX - A000600": [{"offsets": [0,0,0]}],
     "LabwareTypes": [{
         "Nun_1ml_96_rd": "Nunc 96DW Polystyrene - #278605"
     }],
     "str3":[
         "================================",
-        "         System Config          ",
+        "       Instrument Config        ",
         "================================"],
-    "SN593B": [{}],
-    "str2":[
+    "Instrument_SN":[{
+        "SN593B": [{"offsets": [0,0,0]}],
+        "SN495D": [{"offsets": [0,0,0]}],
+        "SN261B": [{"offsets": [0,0,0]}],
+        "SN7721": [{"offsets": [0,0,0]}],
+        "SN297B": [{"offsets": [0,0,0]}],
+        "SN613B": [{"offsets": [0,0,0]}],
+        "SN7722": [{"offsets": [0,0,0]}],
+        "SN994G": [{"offsets": [0,0,0]}],
+        "SN830H": [{"offsets": [0,0,0]}],
+        "SN7969": [{"offsets": [0,0,0]}],
+        "SN0000": [{"offsets": [0,0,0]}]
+    }],
+    "str4":[
         "================================",
         "          Config Guide          ",
         "================================"],
     "Example Workflow": [{
-            "int__Submerge": "Immersion depth from the position where the liquid level is detected",
-            "int__Height": "Aspirate position with respect to the container bottom. Only active if 'int__Submerge = 0'",
-            "int__Retract": "Distance the tip will be retracted before the air transport volume is aspirated. Only active if 'int__Submerge = 0'",
-            "int__Following": "Tip following the liquid. 0 = off, 1 = on",
-            "int__MixCycles": "Number of mixing cycles",
-            "int__MixVolume": "Mixing volume",
-            "strLC": "Liquid class to be used for the transfer",
-            "int__Volume": "liquid volume to be transferred",
-            "int__BindTime": "Start a timer for this length of time",
-            "blnBindOn__": "Boolean value that triggers a plate transport. 0 = no, 1 = yes",
-            "int__Temp": "Temperature of the HHS",
-            "int__Shake": "Shaking speed of the HHS"
-        }]
-    
+        "int__Submerge": "Immersion depth from the position where the liquid level is detected",
+        "int__Height": "Aspirate position with respect to the container bottom. Only active if 'int__Submerge = 0'",
+        "int__Retract": "Distance the tip will be retracted before the air transport volume is aspirated. Only active if 'int__Submerge = 0'",
+        "int__Following": "Tip following the liquid. 0 = off, 1 = on",
+        "int__MixCycles": "Number of mixing cycles",
+        "int__MixVolume": "Mixing volume",
+        "strLC": "Liquid class to be used for the transfer",
+        "int__Volume": "liquid volume to be transferred",
+        "int__BindTime": "Start a timer for this length of time",
+        "blnBindOn__": "Boolean value that triggers a plate transport. 0 = no, 1 = yes",
+        "int__Temp": "Temperature of the HHS",
+        "int__Shake": "Shaking speed of the HHS"
+    }]
 }
