@@ -4,10 +4,12 @@
  namespace _Method { #include "WSI\\JSONSearch\\JSONSearch.hs_" } 
  namespace _Method { #include "HSLSeqLib.hsl" } 
  namespace _Method { #include "HSLML_STARLib.hsl" } 
- namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
+ namespace _Method { #include "WSI\\HSLGetSerialNumber_WSI\\HSLGetSerialNumber_WSI.hsl" } 
 #include "GenericSPRI\\Layouts\\261B_Layout1.res"
+ namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
+ namespace _Method { #include "VirtualLabware_V2.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
@@ -229,6 +231,21 @@ variable intBead2_AspMixVolume;
 variable intBead2_AspMixCycles;
 sequence seqRes_BindingBeads2;
 sequence seqTrp_BindPlates2;
+variable arrPossibleBeadReservoirs[];
+variable arrPossibleReservoirs[];
+variable arrPossibleMagnetTypes[];
+variable arrPossibleBead2Reservoirs[];
+variable arrPossibleBindPlates[];
+variable arrPossibleDestinationPlates[];
+variable arrPossibleSourcePlates[];
+variable arrMagnetOffsets[];
+variable arrBeadRes2Offsets[];
+variable arrDestinationPlateOffsets[];
+variable arrBeadResOffsets[];
+variable arrBindPlateOffsets[];
+variable arrResOffsets[];
+variable arrSourcePlateOffsets[];
+variable arrInstrumentOffsets[];
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -260,8 +277,8 @@ PTL::SetLoadingStateDefault("RecoveryOptionDefault", 0);
 PTL::SetLoadingStateDefault("KitLotCheckEnabled", hslFalse);
 LOAD_INSTRUCTIONS::_InitLibrary();
 JSONSEARCH::_InitLibrary();
-CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 NTRDIRECTUSE_WGSPCRXP::_InitLibrary();
+CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 ::RegisterAbortHandler( "OnAbort");
 // }} ""
 // {{ 1 1 0 "decc4235_8b52_4ff3_ace1b07a267e8edd" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
@@ -282,8 +299,8 @@ B_CreateSequences();
 // {{{ 5 1 0 "27d619ec_decc_4c7b_ac7b2216561bf5b6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 C_LoadInstructions();
 // }} ""
-// {{{ 6 1 0 "a964eec2_4285_46d3_849b86ea48797204" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-D_PipettingSteps();
+// {{{ 6 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+E_PipettingSteps();
 // }} ""
 // {{ 7 1 0 "d812a1d2_a8a0_4eec_b9047f81596fda88" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "d812a1d2_a8a0_4eec_b9047f81596fda88" );
@@ -295,10 +312,10 @@ HSLHamHeaterShaker::Terminate();
 // {{ 2 "AutoExitBlock" ""
 LOAD_INSTRUCTIONS::_ExitLibrary();
 JSONSEARCH::_ExitLibrary();
-CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 NTRDIRECTUSE_WGSPCRXP::_ExitLibrary();
+CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // }} ""
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-06-06 11:48$$checksum=a66cd2d9$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-06-12 10:10$$checksum=8cba32a4$$length=083$$

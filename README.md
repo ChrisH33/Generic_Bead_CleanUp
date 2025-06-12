@@ -10,14 +10,16 @@ This method aims to address that problem. We have developed a flexible Hamilton 
 ### Requirements
 - Hamilton VENUS 4.5.0.7977
 - Hamilton Libraries
-    - JSONSearch (https://github.com/ChrisH33/JSONSearch)
-        - FindDBPath (https://github.com/ChrisH33/FindDBPath)
     - load_instructions
     - HSLML_STARLib
     - HSLSeqLib
     - HSLStrLib
     - HslHamHeaterShakerLib
     - TraceLevel
+- Sanger-Created Hamilton Libraries
+    - JSONSearch (github.com/ChrisH33/JSONSearch)
+    - FindDBPath (github.com/ChrisH33/FindDBPath)
+    - HSLGetSerialNumber_WSI (github.com/ChrisH33/HSLGetSerialNumber_WSI)
 
 ### Adding new Workflows
 Adding new methods or labware should not require any modification to the Hamilton method. All of the variables you might want to change can be found in 'MethodConfig.json'
