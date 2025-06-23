@@ -246,8 +246,6 @@ variable arrBindPlateOffsets[];
 variable arrResOffsets[];
 variable arrSourcePlateOffsets[];
 variable arrInstrumentOffsets[];
-sequence seqPCR_DestinationPlates;
-sequence seqRes_ElutionBuffer;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -320,4 +318,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=Hamilton$$valid=0$$time=2025-06-23 14:33$$checksum=0599a46d$$length=087$$
+// $$author=Hamilton$$valid=0$$time=2025-06-12 12:00$$checksum=9f276d15$$length=087$$
