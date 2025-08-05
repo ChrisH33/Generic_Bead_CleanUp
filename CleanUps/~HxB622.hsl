@@ -242,8 +242,6 @@ variable arrSourcePlateOffsets[];
 variable arrInstrumentOffsets[];
 sequence seqPCR_DestinationPlates;
 sequence seqRes_ElutionBuffer;
-<<<<<<< Updated upstream
-=======
 dialog customDialog9D59BFDDC3874d2aBB1DC8A3F0DCBFC3;
 variable arrPossibleEtOHReservoirs[];
 variable arrPossibleEluReservoirs[];
@@ -266,7 +264,6 @@ variable strPossibleLabware_Elu;
 variable strPossibleLabware_Bind;
 variable strPossibleLabware_Src;
 variable strPossibleLabware_Dest;
->>>>>>> Stashed changes
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -343,8 +340,4 @@ GITHUB_CHECKS::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-<<<<<<< Updated upstream
-// $$author=Hamilton$$valid=0$$time=2025-06-23 14:33$$checksum=0599a46d$$length=087$$
-=======
 // $$author=ch33$$valid=0$$time=2025-08-05 13:35$$checksum=293260e8$$length=083$$
->>>>>>> Stashed changes
