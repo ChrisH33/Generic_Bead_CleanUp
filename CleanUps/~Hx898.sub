@@ -7,7 +7,6 @@ private function E_PipettingSteps(  ) void ;
 private function _GetJSONValue( variable i_strFilePath, variable i_strSearch, variable i_intTrace, variable i_blnForceCheck, variable & o_arr[] ) variable ;
 private function _GetLabwareParameters( sequence i_seq, variable & o_arr[] ) void ;
 private function _GetPipelineVariables( variable i_strConfigFilePath, variable i_strPipeline ) void ;
-private function _VersionHistory(  ) void ;
 function OnAbort(  ) void ;
 // }} ""
 // {{{ 5 "OnAbort" "Begin"
@@ -26,6 +25,7 @@ private variable _;
 private variable intTraceLevel;
 private dialog customDialog0540B0B66E0E4fc3ADB4E0958D31DF81;
 private variable strJsonSearch;
+private variable arrAvailablePipelineSteps[];
 private variable strMethodFolderPath;
 private variable strConfigName;
 private variable intNumberOfPossiblePipelines;
@@ -43,6 +43,7 @@ private variable intIndex_Bind;
 private variable arrPossibleLabware[];
 private variable blnForceStep;
 private dialog customDialog7AE83E9FAACB4da0BBF882173656E3D4;
+private dialog customDialogDFD7095E762A4f60BA4C8CBDFD81F68C;
 private variable blnStartingStep_16;
 private variable blnStartingStep_1;
 private variable blnStartingStep_2;
@@ -114,8 +115,8 @@ intCOREChannel = 4;
 // {{ 19 1 0 "cfb87cb6_e5d6_429d_a8f61a750ca895a3" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
 arrAvailablePipelines.SetSize(0);
 // }} ""
-// {{{ 20 1 0 "edfaa7f6_85a6_4635_8e86186e0f668161" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-strMethodFolderPath = StrConcat2(Translate("C:\\Program Files (x86)\\HAMILTON\\Methods\\"), Translate("GenericSPRI\\.config\\"));
+// {{ 20 1 0 "0e002493_62c9_4802_b356854948129f52" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+strMethodFolderPath = Translate("C:\\Program Files (x86)\\HAMILTON\\Methods\\GenericSPRI\\");
 // }} ""
 // {{ 21 1 0 "36978ec6_e7e7_462d_93b98bb87aec9a64" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 strConfigName = Translate("LabwareInstrumentConfig.json");
@@ -172,9 +173,9 @@ TRACELEVEL::TraceArray(TRACE_LEVEL_DEBUG, Translate("Approved Pipelines"), arrAv
 // {{ 38 1 0 "7092195e_82f4_482a_873868e78b120eec" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
-// {{ 39 1 0 "1d302483_df24_487d_8a4872f502eca1f5" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
-customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.InitCustomDialog( "1d302483_df24_487d_8a4872f502eca1f5" );
-customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.SetCustomDialogArrayProperty( "comboBox1.ItemsSource", arrAvailablePipelines );
+// {{ 39 1 0 "5e29112c_17dd_4580_ae8ce4efd9c4030b" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.InitCustomDialog( "5e29112c_17dd_4580_ae8ce4efd9c4030b" );
+customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.SetCustomDialogArrayProperty( "comboBox1.ItemsSource", arrAvailablePipelineSteps );
 customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.SetCustomDialogProperty( "comboBox1.SelectedIndex", intPipelineIndex );
 customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.ShowCustomDialog();
 rtnValue = customDialog0540B0B66E0E4fc3ADB4E0958D31DF81.GetCustomDialogProperty( "ReturnValue" );
@@ -1209,6 +1210,7 @@ private variable intSeqCap;
 private variable strLoadMessage;
 private variable rtnValue;
 private dialog customDialog9C04972DACA1442bA97AD063F5DE6B66;
+private variable strMagnetType;
 private variable _intTipsNeeded;
 private variable __[];
 // {{ 5 "C_LoadInstructions" "InitLocals"
@@ -7487,16 +7489,5 @@ private function D_BarcodeScanning(  ) void {
 // {{{ 5 "D_BarcodeScanning" "End"
 }
 // }} ""
-// {{{ 5 "_VersionHistory" "Begin"
-private function _VersionHistory(  ) void {
-// }} ""
-// {{ 5 "_VersionHistory" "InitLocals"
-// }} ""
-// {{ 2195 1 0 "cdb68cdd_ed7a_4ad9_ab97e3013586e244" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
-
-// }} ""
-// {{{ 5 "_VersionHistory" "End"
-}
-// }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-05 12:56$$checksum=f3ebd395$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-08-08 12:02$$checksum=6a7d99fd$$length=083$$

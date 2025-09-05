@@ -7,10 +7,9 @@
  namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
  namespace _Method { #include "WSI\\HSLGetSerialNumber_WSI\\HSLGetSerialNumber_WSI.hsl" } 
- namespace _Method { #include "VirtualLabware_V2.hsl" } 
 #include "GenericSPRI\\Layouts\\261B_Layout1.res"
  namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
- namespace _Method { #include "WSI\\GitHub_Checks\\GitHub_Checks.hs_" } 
+ namespace _Method { #include "VirtualLabware_V2.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
@@ -183,9 +182,13 @@ variable blnTopUp_Eject;
 variable blnTopUp;
 variable blnBead_Eject;
 sequence seqWashPlate;
+variable strMagnetType;
+variable strConfigFilePath;
+variable intPipelineChoice;
 variable intCOREChannel;
 variable blnDoubleSided;
 sequence seqDWP_BindPlates2;
+dialog customDialogCEBEF4F2B34042e6B1374AC5360EF2CF;
 variable strLC_SupTrans;
 variable intBead2_AspHeight;
 variable intSupTrans_AspHeight;
@@ -229,47 +232,20 @@ variable intBead2_AspMixCycles;
 sequence seqRes_BindingBeads2;
 sequence seqTrp_BindPlates2;
 variable arrPossibleBeadReservoirs[];
+variable arrPossibleReservoirs[];
 variable arrPossibleMagnetTypes[];
+variable arrPossibleBead2Reservoirs[];
 variable arrPossibleBindPlates[];
 variable arrPossibleDestinationPlates[];
 variable arrPossibleSourcePlates[];
 variable arrMagnetOffsets[];
+variable arrBeadRes2Offsets[];
 variable arrDestinationPlateOffsets[];
 variable arrBeadResOffsets[];
 variable arrBindPlateOffsets[];
+variable arrResOffsets[];
 variable arrSourcePlateOffsets[];
 variable arrInstrumentOffsets[];
-sequence seqPCR_DestinationPlates;
-sequence seqRes_ElutionBuffer;
-dialog customDialogCEBEF4F2B34042e6B1374AC5360EF2CF;
-variable arrPossibleLabware_Src[];
-variable arrPossibleLabware_Waste[];
-variable arrPossibleLabware_Bead[];
-variable arrPossibleLabware_EtOH[];
-variable arrPossibleLabware_Bind[];
-variable arrPossibleLabware_Elu[];
-variable arrPossibleLabware_Dest[];
-variable arrPossibleLabware_Mag[];
-variable strPossibleLabware_Bead;
-variable strPossibleLabware_EtOH;
-variable strPossibleLabware_Waste;
-variable strConfigFilePath_Workflow;
-variable strPossibleLabware_Elu;
-variable strPossibleLabware_Bind;
-variable strConfigFilePath_General;
-variable strPossibleLabware_Mag;
-variable strPossibleLabware_Src;
-variable strPossibleLabware_Dest;
-variable arrOffsets_Waste[];
-variable arrOffsets_Instrument[];
-variable arrOffsets_Bind[];
-variable arrOffsets_Elu[];
-variable arrOffsets_Dest[];
-variable arrOffsets_Bead[];
-variable arrActiveSteps[];
-variable arrOffsets_Mag[];
-variable arrOffsets_EtOH[];
-variable arrOffsets_Src[];
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -303,10 +279,9 @@ LOAD_INSTRUCTIONS::_InitLibrary();
 JSONSEARCH::_InitLibrary();
 NTRDIRECTUSE_WGSPCRXP::_InitLibrary();
 CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
-GITHUB_CHECKS::_InitLibrary();
 ::RegisterAbortHandler( "OnAbort");
 // }} ""
-// {{ 1 1 0 "82f59642_4aef_47fb_a220b1e53569f6e3" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 1 1 0 "decc4235_8b52_4ff3_ace1b07a267e8edd" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
 // {{ 2 1 0 "187ddb87_6b52_4908_b7ddbe74f19e17af" "ML_STAR:{1C0C0CB0-7C87-11D3-AD83-0004ACB1DCB2}"
@@ -327,8 +302,8 @@ C_LoadInstructions();
 // {{{ 6 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 E_PipettingSteps();
 // }} ""
-// {{ 7 1 0 "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
-customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" );
+// {{ 7 1 0 "d812a1d2_a8a0_4eec_b9047f81596fda88" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "d812a1d2_a8a0_4eec_b9047f81596fda88" );
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.ShowCustomDialog();
 // }} ""
 // {{{ 8 1 0 "dd6342e5_3cc2_4ee9_83f4d37a47350fc6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
@@ -339,9 +314,8 @@ LOAD_INSTRUCTIONS::_ExitLibrary();
 JSONSEARCH::_ExitLibrary();
 NTRDIRECTUSE_WGSPCRXP::_ExitLibrary();
 CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
-GITHUB_CHECKS::_ExitLibrary();
 // }} ""
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-05 12:56$$checksum=e1623b3b$$length=083$$
+// $$author=Hamilton$$valid=0$$time=2025-06-12 12:00$$checksum=9f276d15$$length=087$$
