@@ -35,7 +35,6 @@
     ],
     "Step1_Details": [{
         "Step_Description": "----- Dilute DNA -----",
-        "blnTopUp": false,
         "intTopUpVolume": 0,
         "strLC_TopUp": "StandardVolume_Water_DispenseJetEmpty96Head",
         "blnTopUp_Eject": false,

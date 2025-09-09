@@ -8,9 +8,9 @@
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
  namespace _Method { #include "WSI\\HSLGetSerialNumber_WSI\\HSLGetSerialNumber_WSI.hsl" } 
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
-#include "GenericSPRI\\Layouts\\261B_Layout1.res"
  namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "WSI\\GitHub_Checks\\GitHub_Checks.hs_" } 
+#include "GenericSPRI\\Layouts\\261B_Layout1.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
@@ -294,7 +294,7 @@ CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 GITHUB_CHECKS::_InitLibrary();
 ::RegisterAbortHandler( "OnAbort");
 // }} ""
-// {{ 1 1 0 "c72ff574_6c9f_4b77_8d96c2be69786f24" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 1 1 0 "1c2be23e_1641_4428_a6b1a5130692bbd7" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
 // {{ 2 1 0 "187ddb87_6b52_4908_b7ddbe74f19e17af" "ML_STAR:{1C0C0CB0-7C87-11D3-AD83-0004ACB1DCB2}"
@@ -332,4 +332,4 @@ GITHUB_CHECKS::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-09 09:18$$checksum=570af17b$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-09 18:09$$checksum=517ea527$$length=083$$
