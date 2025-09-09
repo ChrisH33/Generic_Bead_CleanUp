@@ -1,7 +1,7 @@
 {
     "Labware_Details": [{
-        "Bind_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252"],
         "Source_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
+        "Bind_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252"],
         "Destination_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
         "Bead_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252"],
         "EtOH_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
@@ -11,7 +11,6 @@
     }],
     "Processing_Details": [{
         "intMaxPlateThroughput": 2,
-        "blnDoubleSided": false,
         "strTipType": "300uLNTRs",
         "strPipettingTool": "96MPH",
         "intTipRequired": 576
@@ -20,7 +19,7 @@
         "_",
         "Transfer Beads",
         "Transfer DNA",
-        "Incubate DNA + Beads",
+        "Incubate Beads + DNA",
         "Pulldown DNA",
         "_",
         "_",
