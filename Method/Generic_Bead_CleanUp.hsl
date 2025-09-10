@@ -8,11 +8,11 @@
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
  namespace _Method { #include "WSI\\HSLGetSerialNumber_WSI\\HSLGetSerialNumber_WSI.hsl" } 
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
-#include "GenericSPRI\\Layouts\\261B_Layout1.res"
  namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
  namespace _Method { #include "WSI\\GitHub_Checks\\GitHub_Checks.hs_" } 
+#include "GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
-global device ML_STAR ("GenericSPRI\\Layouts\\261B_Layout1.lay", "ML_STAR", hslTrue);
+global device ML_STAR ("GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
 sequence seqRes_BindingBeads;
 sequence seqPCR_SourcePlates;
@@ -180,11 +180,9 @@ variable intBead_AspSubmerge;
 variable intSourcePlateNumber;
 variable blnSimMode;
 variable blnTopUp_Eject;
-variable blnTopUp;
 variable blnBead_Eject;
 sequence seqWashPlate;
 variable intCOREChannel;
-variable blnDoubleSided;
 sequence seqDWP_BindPlates2;
 variable strLC_SupTrans;
 variable intBead2_AspHeight;
@@ -226,19 +224,7 @@ variable intBead2_DispRetract;
 variable intBead2_AspSubmerge;
 variable intBead2_AspMixVolume;
 variable intBead2_AspMixCycles;
-sequence seqRes_BindingBeads2;
 sequence seqTrp_BindPlates2;
-variable arrPossibleBeadReservoirs[];
-variable arrPossibleMagnetTypes[];
-variable arrPossibleBindPlates[];
-variable arrPossibleDestinationPlates[];
-variable arrPossibleSourcePlates[];
-variable arrMagnetOffsets[];
-variable arrDestinationPlateOffsets[];
-variable arrBeadResOffsets[];
-variable arrBindPlateOffsets[];
-variable arrSourcePlateOffsets[];
-variable arrInstrumentOffsets[];
 sequence seqPCR_DestinationPlates;
 sequence seqRes_ElutionBuffer;
 dialog customDialogCEBEF4F2B34042e6B1374AC5360EF2CF;
@@ -306,7 +292,7 @@ CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 GITHUB_CHECKS::_InitLibrary();
 ::RegisterAbortHandler( "OnAbort");
 // }} ""
-// {{ 1 1 0 "decc4235_8b52_4ff3_ace1b07a267e8edd" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 1 1 0 "4d84e1b6_fa13_491b_bc683e6b561fed76" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
 // {{ 2 1 0 "187ddb87_6b52_4908_b7ddbe74f19e17af" "ML_STAR:{1C0C0CB0-7C87-11D3-AD83-0004ACB1DCB2}"
@@ -344,4 +330,4 @@ GITHUB_CHECKS::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-08-08 12:02$$checksum=5ccd0c0b$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-10 15:50$$checksum=d9171321$$length=083$$

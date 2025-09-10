@@ -7905,9 +7905,6 @@ private variable _intXAcceleration;
 private variable _intGripWidth;
 private variable _intGripHeight;
 private variable _strLabwareName;
-private variable _strLabwareID;
-private variable _intCutLength;
-private variable _intStrLength;
 private variable _strJSONSearch;
 private variable _strLabwareAlias;
 private variable __[];
@@ -8097,4 +8094,4 @@ private function _VersionHistory(  ) void {
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-09 18:09$$checksum=e05fa2f9$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-10 15:50$$checksum=70a4aef0$$length=083$$
