@@ -305,12 +305,12 @@ A_UserInput();
 // {{{ 4 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 B_CreateSequences();
 // }} ""
-// {{{ 5 1 0 "9b181b39_d3f7_4d9e_860761e87a9c4ef3" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-C_LoadInstructions();
-// }} ""
-// {{ 6 1 0 "e4975c75_f79b_4a5d_904d18b6aee559f8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 5 1 0 "e4975c75_f79b_4a5d_904d18b6aee559f8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 if (blnSimMode == 0)
 {
+// }} ""
+// {{{ 6 1 0 "0f2661f9_0564_474d_a272c675f2f23eee" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+C_LoadInstructions();
 // }} ""
 // {{ 7 1 0 "e4975c75_f79b_4a5d_904d18b6aee559f8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
@@ -334,4 +334,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-17 16:32$$checksum=17d44c59$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-17 16:45$$checksum=c3ec13da$$length=083$$
