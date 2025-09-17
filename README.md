@@ -37,13 +37,4 @@ For questions or support, please contact Chris Henderson
 
     Email: ch33@sanger.ac.uk
     GitHub: ChrisH33
-
-heater shaker not working
-check offsets on labware
-source labware into bind labware isn't working
-Carrier check
-30sec timer on the ethanol wash
-touch-off on waste of ethanol wash
-tip rack to waste before timer
-Load instructions lost pictures
-Drying step running on transfer eluate
+    
