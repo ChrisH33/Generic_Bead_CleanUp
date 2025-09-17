@@ -1,6 +1,5 @@
 {
     "Labware_Details": [{
-        "Bind_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
         "Source_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
         "Destination_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
         "Bead_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
@@ -11,7 +10,6 @@
     }],
     "Processing_Details": [{
         "intMaxPlateThroughput": 2,
-        "blnDoubleSided": false,
         "strTipType": "300uLNTRs",
         "strPipettingTool": "96MPH",
         "intTipRequired": 576
@@ -34,9 +32,6 @@
         "Pulldown Beads",
         "Recover DNA"
     ],
-    "Step1_Details": [{
-        "Step_Description": "----- Dilute DNA -----"
-    }],
     "Step2_Details": [{
         "Step_Description": "----- Transfer Beads -----",
         "blnSourcePlateCleanup": true,
@@ -49,9 +44,6 @@
         "intBead_DispLLD": 0, "intBead_DispSubmerge": 0, "intBead_DispHeight": 1, "intBead_DispRetract": 5,
         "intBead_DispFollowing": 0, "intBead_DispMixCycles": 30, "intBead_DispMixVolume": 70
     }],
-    "Step3_Details": [{
-        "Step_Description": "----- Transfer DNA -----"
-    }],
     "Step4_Details": [{
         "Step_Description": "----- Incubate DNA + Beads -----",
         "intDNABindTime": 300,
@@ -60,18 +52,6 @@
     "Step5_Details": [{
         "Step_Description": "----- Pulldown DNA -----",
         "intDNAPulldownTime": 180
-    }],
-    "Step6_Details": [{
-        "Step_Description": "----- Transfer Beads #2 -----"
-    }],
-    "Step7_Details": [{
-        "Step_Description": "----- Transfer Supernatant -----"
-    }],
-    "Step8_Details": [{
-        "Step_Description": "----- Incubate DNA + Beads #2 -----"
-    }],
-    "Step9_Details": [{
-        "Step_Description": "----- Pulldown DNA #2 -----"
     }],
     "Step10_Details": [{
         "Step_Description": "----- Remove Supernatant -----",
