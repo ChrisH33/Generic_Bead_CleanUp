@@ -41,11 +41,12 @@
         "Nunc 96-Well Polypropylene DeepWell - #260252",
         "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301",
         "Alpaqua Magnum FLX - A000600",
-        "Alpaqua 96S Super - A001322"
+        "Alpaqua 96S Super - A001322",
+        "Alpaqua LE Magnet - A000350"
     ],
     "Eppendorf twin.tec PCR Plate 96 - #0030128648": [
         {
-            "intGripHeight": 35,
+            "intGripHeight": 5,
             "intGripWidth": 79,
             "intGripWidthOpen": 85,
             "intGripForce": 5,
@@ -138,6 +139,17 @@
             "Offsets Relative to": "Cos_96_DW_2mL"
         }
     ],
+    "Alpaqua LE Magnet - A000350": [
+        {
+            "offsets": [
+                0,
+                0,
+                0
+            ],
+            "Offsets Relative to": "Cos_96_DW_2mL"
+        }
+    ],
+    
     "str3": [
         "================================",
         "       Instrument Config        ",
