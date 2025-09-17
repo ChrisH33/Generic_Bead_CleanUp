@@ -4,7 +4,7 @@
  namespace _Method { #include "WSI\\JSONSearch\\JSONSearch.hs_" } 
  namespace _Method { #include "HSLSeqLib.hsl" } 
  namespace _Method { #include "HSLML_STARLib.hsl" } 
- namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
+ namespace _Method { #include "Nested Tip Racks (All)\\NTRDirectUse_WGSPCRXP\\NTRDirectUse_WGSPCRXP.hs_" } 
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
  namespace _Method { #include "WSI\\HSLGetSerialNumber\\HSLGetSerialNumber_WSI.hsl" } 
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
@@ -327,4 +327,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-17 14:37$$checksum=80dfa4ed$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-17 16:08$$checksum=655306dd$$length=083$$

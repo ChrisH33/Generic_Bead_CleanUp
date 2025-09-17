@@ -1,13 +1,13 @@
 {
     "Labware_Details": [{
-        "Source_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "Bind_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252"],
-        "Destination_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "Bead_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252"],
-        "EtOH_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
-        "Elution_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
+        "Source_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "Bind_Plate_Type": ["Nunc 96-Well Polypropylene DeepWell - #260252"],
+        "Destination_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "Bead_Plate_Type": ["Nunc 96-Well Polypropylene DeepWell - #260252"],
+        "EtOH_Reservoir_Type": ["Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
+        "Elution_Reservoir_Type": ["Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
         "Magnet_Type": ["Alpaqua 96S Super - A001322", "Alpaqua Magnum FLX - A000600"],
-        "Waste_Reservoir_Type": ["Abgene™ 96 Well 2.2mL Polypropylene DeepWell™ - #AB0932"]
+        "Waste_Reservoir_Type": ["Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932"]
     }],
     "Processing_Details": [{
         "intMaxPlateThroughput": 2,
