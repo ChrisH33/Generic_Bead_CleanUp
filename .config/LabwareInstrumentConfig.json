@@ -7,7 +7,7 @@
     "Approved Pipelines": [
         "SGE - IL2_PCR_XP",
         "Ultima Bakeoff",
-        "RNA_SPRI"
+        "RNA_SPRI_v1"
     ],
     "Every Step": [
         "Dilute DNA",

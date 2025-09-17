@@ -5,10 +5,10 @@
  namespace _Method { #include "HSLSeqLib.hsl" } 
  namespace _Method { #include "HSLML_STARLib.hsl" } 
  namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
- namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
- namespace _Method { #include "WSI\\HSLGetSerialNumber_WSI\\HSLGetSerialNumber_WSI.hsl" } 
+ namespace _Method { #include "Device Sub-method Libraries\\HslHamHeaterShakerLib\\HslHamHeaterShakerLib.hsl" } 
+ namespace _Method { #include "WSI\\HSLGetSerialNumber\\HSLGetSerialNumber_WSI.hsl" } 
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
- namespace _Method { #include "CheckCarrierPresenceAbsence.hs_" } 
+ namespace _Method { #include "CheckCarrierPresence (All)\\CheckCarrierPresenceAbsence.hs_" } 
 #include "GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
@@ -327,4 +327,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=Hamilton$$valid=0$$time=2025-09-10 17:12$$checksum=58555479$$length=087$$
+// $$author=ch33$$valid=0$$time=2025-09-17 09:34$$checksum=71324ee4$$length=083$$

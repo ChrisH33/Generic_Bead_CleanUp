@@ -1,9 +1,9 @@
 {
     "Labware_Details": [{
-        "Bind_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252","second labware"],
+        "Bind_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
         "Source_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
         "Destination_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "Bead_Plate_Type": ["Nunc™ 96-Well Polypropylene DeepWell™ - #260252"],
+        "Bead_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
         "EtOH_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
         "Elution_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
         "Magnet_Type": ["Alpaqua 96S Super - A001322", "Alpaqua Magnum FLX - A000600"],
@@ -40,24 +40,17 @@
     "Step2_Details": [{
         "Step_Description": "----- Transfer Beads -----",
         "blnSourcePlateCleanup": true,
-        "intBeadVolume": 40,
+        "intBeadVolume": 41,
         "strBeadType": "SPRISelect",
         "strLC_Bead": "DNAP_Tip_300ul_96COREHead_SPRI_Beads_DispenseSurface_Empty",
-        "blnBead_Eject": false,
-        "intBead_AspLLD": 0, "intBead_AspSubmerge": 0, "intBead_AspHeight": 0.8, "intBead_AspRetract": 25,
+        "blnBead_Eject": true,
+        "intBead_AspLLD": 0, "intBead_AspSubmerge": 0, "intBead_AspHeight": 0.8, "intBead_AspRetract": 16,
         "intBead_AspFollowing": 0, "intBead_AspMixCycles": 0, "intBead_AspMixVolume": 0,
         "intBead_DispLLD": 0, "intBead_DispSubmerge": 0, "intBead_DispHeight": 1, "intBead_DispRetract": 5,
         "intBead_DispFollowing": 0, "intBead_DispMixCycles": 0, "intBead_DispMixVolume": 0
     }],
     "Step3_Details": [{
-        "Step_Description": "----- Transfer DNA -----",
-        "intDNAVolume": 50,
-        "strLC_DNA": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty_Slow_Dispense",
-        "blnDNA_Eject": false,
-        "intDNA_AspLLD": 0, "intDNA_AspSubmerge": 0, "intDNA_AspHeight": 0.4, "intDNA_AspRetract": 5,
-        "intDNA_AspFollowing": 0, "intDNA_AspMixCycles": 0, "intDNA_AspMixVolume": 0,
-        "intDNA_DispLLD": 0, "intDNA_DispSubmerge": 0, "intDNA_DispHeight": 1.2, "intDNA_DispRetract": 5,
-        "intDNA_DispFollowing": 0, "intDNA_DispMixCycles": 30, "intDNA_DispMixVolume": 120
+        "Step_Description": "----- Transfer DNA -----"
     }],
     "Step4_Details": [{
         "Step_Description": "----- Incubate DNA + Beads -----",
@@ -66,7 +59,7 @@
     }],
     "Step5_Details": [{
         "Step_Description": "----- Pulldown DNA -----",
-        "intDNAPulldownTime": 150
+        "intDNAPulldownTime": 180
     }],
     "Step6_Details": [{
         "Step_Description": "----- Transfer Beads #2 -----"
@@ -83,7 +76,7 @@
     "Step10_Details": [{
         "Step_Description": "----- Remove Supernatant -----",
         "blnRetainSupernatant": false,
-        "intSupernatantVolume": 130,
+        "intSupernatantVolume": 89,
         "strLC_Sup": "DNAP_Tip_300ul_96COREHead_Supernatant_Removal_DispenseSurface_Empty",
         "intSup_AspLLD": 0, "intSup_AspSubmerge": 0, "intSup_AspHeight": 0.3, "intSup_AspRetract": 5,
         "intSup_AspFollowing": 1, "intSup_AspMixCycles": 0, "intSup_AspMixVolume": 0,
@@ -110,8 +103,8 @@
     "Step12_Details": [{
         "Step_Description": "----- Dry Beads -----",
         "intBeadDryingTime": 180,
-        "blnDryOnHHS": false, "intDry_Temp": 0,
-        "blnDryOnDeck": true,
+        "blnDryOnHHS": true, "intDry_Temp": 37,
+        "blnDryOnDeck": false,
         "blnDryOnMagnet": false
     }],
     "Step13_Details": [{
@@ -132,14 +125,14 @@
     }],
     "Step15_Details": [{
         "Step_Description": "----- Pulldown Beads -----",
-        "intBeadPulldownTime": 120,
+        "intBeadPulldownTime": 180,
         "blnBeadPulldown": true
     }],
     "Step16_Details": [{
         "Step_Description": "----- Recover DNA -----",
         "blnTipRinse": false,
         "strLC_Recovery": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty",
-        "intRecoveryVolume": 30,
+        "intRecoveryVolume": 20,
         "intRecovery_AspLLD": 0, "intRecovery_AspSubmerge": 0, "intRecovery_AspHeight": 0.2, "intRecovery_AspRetract": 5,
         "intRecovery_AspFollowing": 0, "intRecovery_AspMixCycles": 0, "intRecovery_AspMixVolume": 0,
         "intRecovery_DispLLD": 0, "intRecovery_DispSubmerge": 0, "intRecovery_DispHeight": 1, "intRecovery_DispRetract": 5,
