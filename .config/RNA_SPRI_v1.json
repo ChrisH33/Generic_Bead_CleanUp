@@ -1,13 +1,13 @@
 {
     "Labware_Details": [{
-        "Bind_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "Source_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "Destination_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "Bead_Plate_Type": ["Eppendorf twin.tec® PCR Plate 96 - #0030128648"],
-        "EtOH_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
-        "Elution_Reservoir_Type": ["Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
+        "Bind_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "Source_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "Destination_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "Bead_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "EtOH_Reservoir_Type": ["Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
+        "Elution_Reservoir_Type": ["Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
         "Magnet_Type": ["Alpaqua 96S Super - A001322", "Alpaqua Magnum FLX - A000600"],
-        "Waste_Reservoir_Type": ["Abgene™ 96 Well 2.2mL Polypropylene DeepWell™ - #AB0932"]
+        "Waste_Reservoir_Type": ["Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932"]
     }],
     "Processing_Details": [{
         "intMaxPlateThroughput": 2,
@@ -20,7 +20,7 @@
         "_",
         "Transfer Beads",
         "_",
-        "Incubate DNA + Beads",
+        "Incubate Beads + DNA",
         "Pulldown DNA",
         "_",
         "_",
@@ -47,7 +47,7 @@
         "intBead_AspLLD": 0, "intBead_AspSubmerge": 0, "intBead_AspHeight": 0.8, "intBead_AspRetract": 16,
         "intBead_AspFollowing": 0, "intBead_AspMixCycles": 0, "intBead_AspMixVolume": 0,
         "intBead_DispLLD": 0, "intBead_DispSubmerge": 0, "intBead_DispHeight": 1, "intBead_DispRetract": 5,
-        "intBead_DispFollowing": 0, "intBead_DispMixCycles": 0, "intBead_DispMixVolume": 0
+        "intBead_DispFollowing": 0, "intBead_DispMixCycles": 30, "intBead_DispMixVolume": 70
     }],
     "Step3_Details": [{
         "Step_Description": "----- Transfer DNA -----"
@@ -112,7 +112,8 @@
         "strEluateType": "Buffer EB",
         "blnEluateOnMagnet": false,
         "strLC_Eluate": "DNAP_Tip_300ul_96COREHead_WaterReservoir_DispenseSurface_Empty",
-        "intEluateVolume": 20,
+        "intEluateVolume": 22.4,
+        "intEluateVolumeNotes": "Volume should be 20",
         "intEluate_AspLLD": 0, "intEluate_AspSubmerge": 0, "intEluate_AspHeight": 1, "intEluate_AspRetract": 25,
         "intEluate_AspFollowing": 0, "intEluate_AspMixCycles": 0, "intEluate_AspMixVolume": 0,
         "intEluate_DispLLD": 0, "intEluate_DispSubmerge": 0, "intEluate_DispHeight": 1.2, "intEluate_DispRetract": 5,
@@ -132,7 +133,7 @@
         "Step_Description": "----- Recover DNA -----",
         "blnTipRinse": false,
         "strLC_Recovery": "DNAP_Tip_300ul_96COREHead_Water_DispenseSurface_Empty",
-        "intRecoveryVolume": 20,
+        "intRecoveryVolume": 40,
         "intRecovery_AspLLD": 0, "intRecovery_AspSubmerge": 0, "intRecovery_AspHeight": 0.2, "intRecovery_AspRetract": 5,
         "intRecovery_AspFollowing": 0, "intRecovery_AspMixCycles": 0, "intRecovery_AspMixVolume": 0,
         "intRecovery_DispLLD": 0, "intRecovery_DispSubmerge": 0, "intRecovery_DispHeight": 1, "intRecovery_DispRetract": 5,

@@ -33,16 +33,16 @@
         "================================"
     ],
     "Possible Labware": [
-        "Eppendorf twin.tec® PCR Plate 96 - #0030128648",
-        "Abgene™ 96 Well 2.2mL Polypropylene DeepWell™ - #AB0932",
-        "Nunc™ 96-Well Polypropylene DeepWell™ - #260252",
-        "Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301",
+        "Eppendorf twin.tec PCR Plate 96 - #0030128648",
+        "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932",
+        "Nunc 96-Well Polypropylene DeepWell - #260252",
+        "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301",
         "Alpaqua Magnum FLX - A000600",
         "Alpaqua 96S Super - A001322"
     ],
-    "Eppendorf twin.tec® PCR Plate 96 - #0030128648": [
+    "Eppendorf twin.tec PCR Plate 96 - #0030128648": [
         {
-            "intGripHeight": 4,
+            "intGripHeight": 35,
             "intGripWidth": 79,
             "intGripWidthOpen": 85,
             "intGripForce": 5,
@@ -52,7 +52,7 @@
             "intZSpeed_Place": 128.7,
             "intPlatePress": 1,
             "offsets": [
-                1,
+                0,
                 0,
                 0
             ],
@@ -61,7 +61,7 @@
             "link": "https://www.eppendorf.com/gb-en/Products/Laboratory-Consumables/Plates/Eppendorf-twintec-PCR-Plates-p-0030128648"
         }
     ],
-    "Abgene™ 96 Well 2.2mL Polypropylene DeepWell™ - #AB0932": [
+    "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932": [
         {
             "intGripHeight": 4,
             "intGripWidth": 79,
@@ -82,7 +82,7 @@
             "link": "https://www.thermofisher.com/order/catalog/product/AB0932"
         }
     ],
-    "Nunc™ 96-Well Polypropylene DeepWell™ - #260252": [
+    "Nunc 96-Well Polypropylene DeepWell - #260252": [
         {
             "intGripHeight": 22,
             "intGripWidth": 79,
@@ -103,7 +103,7 @@
             "link": "https://www.fishersci.co.uk/shop/products/nunc-1-3-2-0ml-deepwell-plates-shared-wall-technology/10393262"
         }
     ],
-    "Nalgene™ Disposable Polypropylene Robotic Reservoirs - #1200-1301": [
+    "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301": [
         {
             "offsets": [
                 4,
