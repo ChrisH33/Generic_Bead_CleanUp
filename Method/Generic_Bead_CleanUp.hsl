@@ -305,17 +305,24 @@ A_UserInput();
 // {{{ 4 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 B_CreateSequences();
 // }} ""
-// {{{ 5 1 0 "27d619ec_decc_4c7b_ac7b2216561bf5b6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 5 1 0 "9b181b39_d3f7_4d9e_860761e87a9c4ef3" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 C_LoadInstructions();
 // }} ""
-// {{{ 6 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{ 6 1 0 "e4975c75_f79b_4a5d_904d18b6aee559f8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+if (blnSimMode == 0)
+{
+// }} ""
+// {{ 7 1 0 "e4975c75_f79b_4a5d_904d18b6aee559f8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+}
+// }} ""
+// {{{ 8 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 E_PipettingSteps();
 // }} ""
-// {{ 7 1 0 "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+// {{ 9 1 0 "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" );
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.ShowCustomDialog();
 // }} ""
-// {{{ 8 1 0 "dd6342e5_3cc2_4ee9_83f4d37a47350fc6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 10 1 0 "dd6342e5_3cc2_4ee9_83f4d37a47350fc6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 HSLHamHeaterShaker::Terminate();
 // }} ""
 // {{ 2 "AutoExitBlock" ""
@@ -327,4 +334,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-17 16:08$$checksum=655306dd$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-17 16:32$$checksum=17d44c59$$length=083$$
