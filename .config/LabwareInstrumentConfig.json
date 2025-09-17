@@ -4,6 +4,9 @@
         "        Workflow Config          ",
         "================================"
     ],
+
+    "Trace-Level": 2,
+    
     "Approved Pipelines": [
         "SGE - IL2_PCR_XP",
         "Ultima Bakeoff",
