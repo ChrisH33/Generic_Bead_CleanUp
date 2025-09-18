@@ -5,7 +5,7 @@
         "================================"
     ],
 
-    "Trace-Level": 2,
+    "Trace-Level": 1,
 
     "Approved Pipelines": [
         "SGE - IL2_PCR_XP",
