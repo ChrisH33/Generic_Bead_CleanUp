@@ -1,40 +1,63 @@
-# GenericSPRI
-One challenge facing laboratory automation is standardising methods. Without a clear framework, new methods proliferate and expand the remit of automation teams. These methods are functionally identical, with only slight differences in pipetting volumes or mix cycles. 
+# Generic_Bead_CleanUp
 
-This method aims to address that problem. We have developed a flexible Hamilton method that is capable of performing a range of bead-based cleanups.
+**Generic_Bead_CleanUp** is a flexible Hamilton method created for bead-based cleanups at the Wellcome Sanger Institute.  
+It addresses a common problem in laboratory automation: *method proliferation*.  
+Too often, new methods are only marginally different yet require separate maintenance.  
+This framework standardises cleanup methods, making them easier to maintain, extend, and deploy across multiple pipelines.
 
-### Features
-- **Easy Version Control**: By using this method for all clean-ups, it's easy to update methods and ensure every instrument is running the lasest version
-- **Pipeline Specificity**: The details of each pipeline run are contained within a JSON file, ensuring each run has the correct parameters for the samples it is processing.
+---
 
-### Requirements
-- Hamilton VENUS 4.5.0.7977
-- Hamilton Libraries
-    - load_instructions
-    - HSLML_STARLib
-    - HSLSeqLib
-    - HSLStrLib
-    - HslHamHeaterShakerLib
-    - TraceLevel
-- Sanger-Created Hamilton Libraries
-    - JSONSearch (github.com/ChrisH33/JSONSearch)
-    - FindDBPath (github.com/ChrisH33/FindDBPath)
-    - HSLGetSerialNumber_WSI (github.com/ChrisH33/HSLGetSerialNumber_WSI)
+## Features
+- **Centralised Version Control**  
+  One method for all cleanups, ensuring updates are rolled out consistently across instruments.
+- **Pipeline-Specific Parameters**  
+  Run details are stored in a JSON file, guaranteeing that each workflow uses the correct parameters for its samples.
+- **Extensible Workflows**  
+  New pipelines and labware can be added without modifying the Hamilton method itself.
 
-### Adding new Workflows
-Adding new methods or labware should not require any modification to the Hamilton method. All of the variables you might want to change can be found in 'MethodConfig.json'
+---
 
-To add new methods:
-1. Copy an existing workflow from the "Pipeline Configs" section and paste it beneath the existing workflows
-2. Replace all of the  values with values appropriate to your workflow.
-    - Do not rename any of the properties, as this is what the Hamilton method uses to find the correct value.
-    - It is recommended you do this a text editor that comprehends .json files, as it will be much easier to identify any mistakes.
-5. Add the name of your workflow to "Approved_Pipelines" at the top of the MethodConfig.
+## Adding New Workflows
+All configurable variables are defined in `\.config`.  
+To add a new workflow:
 
+1. Create a copy of `Example.json`.
+3. Update the values to match your workflow.  
+   - **Do not rename properties**  
+   - Use a JSON-aware text editor to minimise errors.
+4. Add the name of your workflow to `"Approved_Pipelines"` at the top of `LabwareInstrumentConfig.json`.
 
-### Support
-For questions or support, please contact Chris Henderson
+---
 
-    Email: ch33@sanger.ac.uk
-    GitHub: ChrisH33
-    
+## Requirements
+
+### Hamilton
+- VENUS 4.5.0.7977  
+- Required libraries:  
+  - `load_instructions.smt`  
+  - `HSLStrLib.hsl`  
+  - `HSLSeqLib.hsl`  
+  - `HSLML_STARLib.hsl`  
+  - `HslHamHeaterShakerLib.hsl`  
+  - `VirtualLabware_V2.hsl`  
+  - `HSLDevLib.hsl`  
+  - `ASWStandard\TraceLevel\TraceLevel.hsl`  
+  - `CheckCarrierPresence (All)\CheckCarrierPresenceAbsence.smt`  
+  - `Nested Tip Racks (All)\NTRDirectUse_WGSPCRXP\NTRDirectUse_WGSPCRXP.smt`  
+
+### Sanger
+- Required libraries: 
+    - `WSI\JSONSearch\JSONSearch.smt`  
+    - `WSI\HSLGetSerialNumber\HSLGetSerialNumber_WSI.hsl`  
+
+👉 Sanger-created libraries can be found here: [Hamilton-Submethod-Libraries](https://github.com/ChrisH33/Hamilton-Submethod-Libraries)
+
+---
+
+## Support
+For questions or support, contact:  
+
+- **Chris Henderson**  
+  📧 ch33@sanger.ac.uk  
+  🧑‍💻 [GitHub: ChrisH33](https://github.com/ChrisH33)  
+  💬 [Slack](https://sanger.enterprise.slack.com/team/U042KMP16KW)
