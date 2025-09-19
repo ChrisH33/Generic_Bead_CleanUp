@@ -10,6 +10,7 @@
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
  namespace _Method { #include "CheckCarrierPresence (All)\\CheckCarrierPresenceAbsence.hs_" } 
 #include "GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.res"
+ namespace _Method { #include "HSLDevLib.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
@@ -181,7 +182,6 @@ variable blnSimMode;
 variable blnTopUp_Eject;
 variable blnBead_Eject;
 sequence seqWashPlate;
-variable intCOREChannel;
 sequence seqDWP_BindPlates2;
 variable strLC_SupTrans;
 variable intBead2_AspHeight;
@@ -361,4 +361,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-19 10:09$$checksum=1786f223$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-19 11:18$$checksum=baeef2e8$$length=083$$
