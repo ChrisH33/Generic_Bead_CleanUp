@@ -1,0 +1,5 @@
+1. Open "AppLauncher/settings.xml" with notepad
+2. Add the following line below "<Buttons>":
+    <Button text="Universal Bead Clean-up" iconSource="hamilton.png" isDefaultIcon="True" command="C:\Program Files (x86)\Hamilton\Bin\HxRun.exe -t &quot;C:\Program Files (x86)\Hamilton\Methods\GenericSPRI\Method\Generic_Bead_CleanUp.hsl&quot;" />
+3. Save & close the file
+4. Relaunch AppLauncher.exe
