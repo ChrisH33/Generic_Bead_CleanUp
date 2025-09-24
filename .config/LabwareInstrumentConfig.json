@@ -5,7 +5,7 @@
         "================================"
     ],
 
-    "Trace-Level": 1,
+    "Trace-Level": 2,
 
     "Approved Pipelines": [
         "SGE - IL2_PCR_XP",
@@ -58,7 +58,7 @@
             "offsets": [
                 0,
                 0,
-                0
+                -0.7
             ],
             "Offsets Relative to": "EppendorfTwinTEC96_Sanger",
             "Sanger_PO": "PLPL0067",
@@ -78,8 +78,8 @@
             "intPlatePress": 1,
             "offsets": [
                 0,
-                2,
-                0
+                0,
+                3.4
             ],
             "Offsets Relative to": "Cos_96_DW_2mL",
             "Sanger_PO": "11594754",
@@ -100,7 +100,7 @@
             "offsets": [
                 0,
                 0,
-                3
+                0.9
             ],
             "Offsets Relative to": "Cos_96_DW_2mL",
             "Sanger_PO": "PLPL0092",
@@ -112,7 +112,7 @@
             "offsets": [
                 0,
                 0,
-                0
+                12
             ],
             "Offsets Relative to": "Cos_96_DW_2mL",
             "Sanger_PO": "PLRE0010",
@@ -123,8 +123,8 @@
         {
             "offsets": [
                 0,
-                5,
-                0
+                0,
+                11.7
             ],
             "Offsets Relative to": "Cos_96_DW_2mL"
         }
