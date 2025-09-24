@@ -11,6 +11,7 @@
  namespace _Method { #include "CheckCarrierPresence (All)\\CheckCarrierPresenceAbsence.hs_" } 
 #include "GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.res"
  namespace _Method { #include "HSLDevLib.hsl" } 
+ namespace _Method { #include "HSLDeckVisualize.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 sequence seqTrp_BindPlates;
@@ -258,8 +259,6 @@ dialog customDialogAD28ECD98E5E4c0e80A655860B646AAD;
 variable rtn;
 variable intTraceLevel;
 sequence seqWashPlate;
-timer tmr_temp;
-dialog customDialog22B95E7F095441d0B4297F759348F533;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -310,48 +309,41 @@ A_UserInput();
 // {{{ 4 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 B_CreateSequences();
 // }} ""
-// {{ 5 1 0 "d0d17a9d_34fe_4b7d_8193ff6b696c94a8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
-if (blnSimMode == 0)
-{
-// }} ""
-// {{{ 6 1 0 "0f2661f9_0564_474d_a272c675f2f23eee" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 5 1 0 "0f2661f9_0564_474d_a272c675f2f23eee" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 C_LoadInstructions();
 // }} ""
-// {{ 7 1 0 "d0d17a9d_34fe_4b7d_8193ff6b696c94a8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
-}
-// }} ""
-// {{ 8 1 0 "7c64ee6c_5cd9_4835_b7b820dd17eb1f26" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+// {{ 6 1 0 "7c64ee6c_5cd9_4835_b7b820dd17eb1f26" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
 customDialogAD28ECD98E5E4c0e80A655860B646AAD.InitCustomDialog( "7c64ee6c_5cd9_4835_b7b820dd17eb1f26" );
 customDialogAD28ECD98E5E4c0e80A655860B646AAD.ShowCustomDialog();
 rtn = customDialogAD28ECD98E5E4c0e80A655860B646AAD.GetCustomDialogProperty( "ReturnValue" );
 // }} ""
-// {{ 9 1 0 "b51a2900_cec2_4294_8c527a785c653a40" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 7 1 0 "b51a2900_cec2_4294_8c527a785c653a40" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 10 1 0 "e3a02bea_1d2c_456d_a2014cf88153dd65" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 8 1 0 "e3a02bea_1d2c_456d_a2014cf88153dd65" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 if (rtn == 2)
 {
 // }} ""
-// {{ 11 1 0 "14ae8338_938f_4102_b906bc96c740ce10" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 9 1 0 "14ae8338_938f_4102_b906bc96c740ce10" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
-// {{ 12 1 0 "e569e9c8_3163_4af7_8bf739e709a5511a" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
+// {{ 10 1 0 "e569e9c8_3163_4af7_8bf739e709a5511a" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
 abort;
 // }} ""
-// {{ 13 1 0 "e3a02bea_1d2c_456d_a2014cf88153dd65" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 11 1 0 "e3a02bea_1d2c_456d_a2014cf88153dd65" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
-// {{ 14 1 0 "b51a2900_cec2_4294_8c527a785c653a40" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 12 1 0 "b51a2900_cec2_4294_8c527a785c653a40" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{{ 15 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 13 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 E_PipettingSteps();
 // }} ""
-// {{ 16 1 0 "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+// {{ 14 1 0 "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "74fdcf27_740a_479d_ae8fa0e7cf6ef3d0" );
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.ShowCustomDialog();
 // }} ""
-// {{{ 17 1 0 "c0682f02_ed92_4a02_80238c36dad60329" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 15 1 0 "c0682f02_ed92_4a02_80238c36dad60329" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 HSLHamHeaterShaker::Terminate();
 // }} ""
 // {{ 2 "AutoExitBlock" ""
@@ -363,4 +355,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-09-24 10:43$$checksum=fdc58524$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-09-24 11:05$$checksum=bb1eb3fb$$length=083$$
