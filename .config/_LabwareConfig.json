@@ -1,35 +1,4 @@
 {
-    "str1": [
-        "================================",
-        "        Workflow Config          ",
-        "================================"
-    ],
-
-    "Trace-Level": 2,
-
-    "Approved Pipelines": [
-        "SGE - IL2_PCR_XP",
-        "Ultima Bakeoff",
-        "RNA_SPRI_v1"
-    ],
-    "Every Step": [
-        "Dilute DNA",
-        "Transfer Beads",
-        "Transfer DNA",
-        "Incubate Beads + DNA",
-        "Pulldown DNA",
-        "Transfer Beads #2",
-        "Transfer Supernatant",
-        "Incubate Beads + DNA #2",
-        "Pulldown DNA #2",
-        "Remove Supernatant",
-        "Wash Beads",
-        "Dry Beads",
-        "Transfer Eluate",
-        "Incubate Beads + Eluate",
-        "Pulldown Beads",
-        "Recover DNA"
-    ],
     "str2": [
         "================================",
         "        Labware Config          ",
@@ -149,7 +118,6 @@
             "Offsets Relative to": "Cos_96_DW_2mL"
         }
     ],
-    
     "str3": [
         "================================",
         "       Instrument Config        ",

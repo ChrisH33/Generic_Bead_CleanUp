@@ -1,0 +1,25 @@
+{
+    "Approved Workflows": [
+        "SGE - IL2_PCR_XP",
+        "Ultima Bakeoff",
+        "RNA_SPRI_v1"
+    ],
+    "Every Step": [
+        "01. Dilute DNA",
+        "02. Transfer Beads",
+        "03. Transfer DNA",
+        "04. Incubate Beads + DNA",
+        "05. Pulldown DNA",
+        "06. Transfer Beads #2",
+        "07. Transfer Supernatant",
+        "08. Incubate Beads + DNA #2",
+        "09. Pulldown DNA #2",
+        "10. Remove Supernatant",
+        "11. Wash Beads",
+        "12. Dry Beads",
+        "13. Transfer Eluate",
+        "14. Incubate Beads + Eluate",
+        "15. Pulldown Beads",
+        "16. Recover DNA"
+    ]
+}
