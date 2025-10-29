@@ -32,7 +32,7 @@
             "intMaxPlateThroughput": 2,
             "strTipType": "300uLNTRs",
             "strPipettingTool": "96MPH",
-            "intTipRequired": 576
+            "intTipsRequired": 576
         }
     ],
     "Steps To Run": [

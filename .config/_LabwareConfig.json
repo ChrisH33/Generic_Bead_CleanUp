@@ -27,9 +27,9 @@
             "offsets": [
                 0,
                 0,
-                0
+                -0.8
             ],
-            "Offsets Relative to": "EppendorfTwinTEC96_Sanger",
+            "Offsets Relative to": "Eppendorf_twin_tec_PCR_Plate_96",
             "Sanger_PO": "PLPL0067",
             "link": "https://www.eppendorf.com/gb-en/Products/Laboratory-Consumables/Plates/Eppendorf-twintec-PCR-Plates-p-0030128648"
         }
@@ -48,7 +48,7 @@
             "offsets": [
                 0,
                 0,
-                3.4
+                2.7
             ],
             "Offsets Relative to": "Nunc_96_Well_Polypropylene_DeepWell",
             "Sanger_PO": "11594754",
@@ -65,11 +65,11 @@
             "intZSpeed_Get": 128.7,
             "intXAcceleration": 4,
             "intZSpeed_Place": 128.7,
-            "intPlatePress": 1,
+            "intPlatePress": 0.5,
             "offsets": [
                 0,
                 0,
-                0
+                0.6
             ],
             "Offsets Relative to": "Nunc_96_Well_Polypropylene_DeepWell",
             "Sanger_PO": "PLPL0092",
@@ -81,7 +81,7 @@
             "offsets": [
                 0,
                 0,
-                12
+                1.2
             ],
             "Offsets Relative to": "Nunc_96_Well_Polypropylene_DeepWell",
             "Sanger_PO": "PLRE0010",
@@ -112,17 +112,17 @@
             "Nunc 96-Well Polypropylene DeepWell - #260252 - offsets": [
                 0,
                 0,
-                11.7
+                14.8
             ],
             "Eppendorf twin.tec PCR Plate 96 - #0030128648 - offsets": [
                 0,
                 0,
-                11.7
+                12.5
             ],
             "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932 - offsets": [
                 0,
                 0,
-                11.7
+                15.1
             ]
         }
     ],
