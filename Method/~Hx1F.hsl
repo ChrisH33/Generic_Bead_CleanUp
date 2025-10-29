@@ -12,7 +12,7 @@
  namespace _Method { #include "HSLDevLib.hsl" } 
  namespace _Method { #include "HSLDeckVisualize.hsl" } 
  namespace _Method { #include "HSLFileDirectoryLib.hsl" } 
-#include "Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.res"
+#include "~Re67FA.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 variable o_intTraceLevel;
@@ -328,4 +328,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-10-29 11:13$$checksum=d2346208$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-10-29 11:11$$checksum=269fcc48$$length=083$$

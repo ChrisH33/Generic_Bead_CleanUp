@@ -158,7 +158,7 @@
             "intEtOH_DispMixCycles": 0,
             "intEtOH_DispMixVolume": 0,
             "intEthanolRemovalVoume": 190,
-            "strLC_Wash": "DNAP_Tip_300ul_96COREHead_Supernatant_Removal_DispenseSurface_Empty",
+            "strLC_Wash": "DNAP_Tip_300ul_96COREHead_EtOH_Removal",
             "intWash_AspLLD": 0,
             "intWash_AspSubmerge": 0,
             "intWash_AspHeight": 0.3,
