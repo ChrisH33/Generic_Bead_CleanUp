@@ -4,7 +4,7 @@
  namespace _Method { #include "WSI\\JSONSearch\\JSONSearch.hs_" } 
  namespace _Method { #include "HSLSeqLib.hsl" } 
  namespace _Method { #include "HSLML_STARLib.hsl" } 
- namespace _Method { #include "Nested Tip Racks (All)\\NTRDirectUse_WGSPCRXP\\NTRDirectUse_WGSPCRXP.hs_" } 
+ namespace _Method { #include "NTRDirectUse_WGSPCRXP.hs_" } 
  namespace _Method { #include "HslHamHeaterShakerLib.hsl" } 
  namespace _Method { #include "WSI\\HSLGetSerialNumber\\HSLGetSerialNumber_WSI.hsl" } 
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
@@ -206,7 +206,6 @@ variable o_intTopUp_AspLLD;
 variable o_intSupTrans_DispRetract;
 variable o_intSupTrans_AspSubmerge;
 variable o_intRecovery_AspRetract;
-variable o_intEthanolRemovalVoume;
 variable o_intBead_DispHeight;
 variable o_intBeadPulldownTime;
 variable o_intBead2_DispRetract;
@@ -254,6 +253,7 @@ sequence seqTipRacks;
 sequence seqWasteRacks;
 variable blnTipsOn;
 variable o_strConfigPath_CurrentWorkflow;
+variable o_intEthanolRemovalVolume;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -295,7 +295,7 @@ CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 // {{ 2 1 0 "187ddb87_6b52_4908_b7ddbe74f19e17af" "ML_STAR:{1C0C0CB0-7C87-11D3-AD83-0004ACB1DCB2}"
 {
 	variable arrRetValues[];
-	arrRetValues = ML_STAR._1C0C0CB0_7C87_11D3_AD83_0004ACB1DCB2("187ddb87_6b52_4908_b7ddbe74f19e17af"); // Initialize
+	arrRetValues = ML_STAR._1C0C0CB0_7C87_11D3_AD83_0004ACB1DCB2( "187ddb87_6b52_4908_b7ddbe74f19e17af" ); // Initialize
 }
 // }} ""
 // {{{ 3 1 0 "8616ac11_fbf1_4fe8_8b88f78aa92617bd" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
@@ -329,4 +329,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=Hamilton$$valid=0$$time=2025-10-29 14:00$$checksum=a362be5c$$length=087$$
+// $$author=ch33$$valid=0$$time=2025-10-29 15:46$$checksum=fbaa8ecd$$length=083$$

@@ -2823,16 +2823,16 @@ _TimerSettings(tmrEthanolDelay, 0, Translate("Ethanol Wash Time"));
 // {{ 962 1 0 "2552f89e_8010_43fd_877c21197349baf9" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
-// {{ 963 1 0 "4baa9995_2796_42b2_8636b4216dc9e8e2" "ML_STAR:{827392A0-B7E8-4472-9ED3-B45B71B5D27A}"
+// {{ 963 1 0 "657c2e38_8abe_427b_b960eaae5526657e" "ML_STAR:{827392A0-B7E8-4472-9ED3-B45B71B5D27A}"
 {
 	variable arrRetValues[];
-	arrRetValues = ML_STAR._827392A0_B7E8_4472_9ED3_B45B71B5D27A("4baa9995_2796_42b2_8636b4216dc9e8e2"); // Head96Aspirate
+	arrRetValues = ML_STAR._827392A0_B7E8_4472_9ED3_B45B71B5D27A("657c2e38_8abe_427b_b960eaae5526657e"); // Head96Aspirate
 }
 // }} ""
-// {{ 964 1 0 "d495abff_4765_4105_91c8a55f0f688620" "ML_STAR:{A48573A5-62ED-4951-9EF9-03207EFE34FB}"
+// {{ 964 1 0 "6db0473b_a68e_43f3_80e6ceb5f70cccd6" "ML_STAR:{A48573A5-62ED-4951-9EF9-03207EFE34FB}"
 {
 	variable arrRetValues[];
-	arrRetValues = ML_STAR._A48573A5_62ED_4951_9EF9_03207EFE34FB("d495abff_4765_4105_91c8a55f0f688620"); // Head96Dispense
+	arrRetValues = ML_STAR._A48573A5_62ED_4951_9EF9_03207EFE34FB("6db0473b_a68e_43f3_80e6ceb5f70cccd6"); // Head96Dispense
 }
 // }} ""
 // {{ 965 1 0 "1844d2cb_62b8_462c_97f837ad59896ae4" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
@@ -4852,8 +4852,8 @@ o_intEtOH_DispMixVolume = _GetJSONValue(i_strConfigPath, _strJSONPrefix, Transla
 // {{ 1624 1 0 "3c42fd15_be85_4e84_a7c7b8077176e500" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{{ 1625 1 0 "14e741d0_a912_46fa_83495a7f30221107" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-o_intEthanolRemovalVoume = _GetJSONValue(i_strConfigPath, _strJSONPrefix, Translate("intEthanolRemovalVoume"), 0, 1, __);
+// {{{ 1625 1 0 "d5a34d72_ae3e_4b01_99e35aa3b7f27a47" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+o_intEthanolRemovalVolume = _GetJSONValue(i_strConfigPath, _strJSONPrefix, Translate("intEthanolRemovalVolume"), 0, 1, __);
 // }} ""
 // {{{ 1626 1 0 "e31e72a5_85af_4e05_9c5a6a4a1c0a23fa" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 o_strLC_Wash = _GetJSONValue(i_strConfigPath, _strJSONPrefix, Translate("strLC_Wash"), 0, 1, __);
@@ -6140,8 +6140,8 @@ if( 0 == _tmr.SetTimer(1) )
     MECC::RaiseRuntimeErrorEx(-1355939584, MECC::IDS::stepNameTimerStart, MECC::IDS::errorStepFailed, "", "HxMetEdCompCmd");
 }
 // }} ""
-// {{ 1812 1 0 "0f79f56e_fcd5_4f30_9696ddfbb2f8637f" "{B31F353F-5D80-11d4-A5EB-0050DA737D89}"
-_rtn = _tmr.WaitTimer(hslTrue, hslTrue);
+// {{ 1812 1 0 "7d41ec0a_27a7_4e6d_975d58df7eb510dd" "{B31F353F-5D80-11d4-A5EB-0050DA737D89}"
+_rtn = _tmr.WaitTimer(hslFalse, hslFalse);
 if (0 == _rtn)
 {
     MECC::RaiseRuntimeErrorEx(-1339162368, MECC::IDS::stepNameTimerWait, MECC::IDS::errorStepFailed, "", "HxMetEdCompCmd");
@@ -6392,4 +6392,4 @@ TRACELEVEL::Trace_02(TRACE_LEVEL_DEBUG, Translate("-- Skipping Tip Eject"), Tran
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=Hamilton$$valid=0$$time=2025-10-29 14:00$$checksum=080c0945$$length=087$$
+// $$author=ch33$$valid=0$$time=2025-10-29 15:46$$checksum=773e1f6b$$length=083$$

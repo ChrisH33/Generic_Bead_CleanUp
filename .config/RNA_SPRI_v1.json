@@ -73,7 +73,7 @@
         "intEtOH_AspFollowing": 0, "intEtOH_AspMixCycles": 0, "intEtOH_AspMixVolume": 0,
         "intEtOH_DispLLD": 0, "intEtOH_DispSubmerge": 0, "intEtOH_DispHeight": 10, "intEtOH_DispRetract": 5,
         "intEtOH_DispFollowing": 0, "intEtOH_DispMixCycles": 0, "intEtOH_DispMixVolume": 0,
-        "intEthanolRemovalVoume": 190,
+        "intEthanolRemovalVolume": 190,
         "strLC_Wash": "DNAP_Tip_300ul_96COREHead_Supernatant_Removal_DispenseSurface_Empty",
         "intWash_AspLLD": 0, "intWash_AspSubmerge": 0, "intWash_AspHeight": 0.3, "intWash_AspRetract": 5,
         "intWash_AspFollowing": 1, "intWash_AspMixCycles": 0, "intWash_AspMixVolume": 0,
