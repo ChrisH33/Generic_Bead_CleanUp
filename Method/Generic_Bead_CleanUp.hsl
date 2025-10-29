@@ -9,11 +9,12 @@
  namespace _Method { #include "WSI\\HSLGetSerialNumber\\HSLGetSerialNumber_WSI.hsl" } 
  namespace _Method { #include "VirtualLabware_V2.hsl" } 
  namespace _Method { #include "CheckCarrierPresence (All)\\CheckCarrierPresenceAbsence.hs_" } 
-#include "GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.res"
  namespace _Method { #include "HSLDevLib.hsl" } 
  namespace _Method { #include "HSLDeckVisualize.hsl" } 
+#include "Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.res"
+ namespace _Method { #include "HSLFileDirectoryLib.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
-global device ML_STAR ("GenericSPRI\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
+global device ML_STAR ("Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 variable o_intTraceLevel;
 variable o_arrPossibleLabware_Dest[];
 variable o_arrPossibleLabware_Elu[];
@@ -299,20 +300,23 @@ CHECKCARRIERPRESENCEABSENCE::_InitLibrary();
 // {{{ 3 1 0 "8616ac11_fbf1_4fe8_8b88f78aa92617bd" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 A_UserInput();
 // }} ""
-// {{{ 4 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{ 4 1 0 "2dc6ddef_e871_449a_99093b21d2d04dab" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
+abort;
+// }} ""
+// {{{ 5 1 0 "cf20ab7a_7618_4540_99045e5411437f9b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 B_CreateSequences();
 // }} ""
-// {{{ 5 1 0 "0f2661f9_0564_474d_a272c675f2f23eee" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 6 1 0 "0f2661f9_0564_474d_a272c675f2f23eee" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 C_LoadInstructions();
 // }} ""
-// {{{ 6 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 7 1 0 "07b81487_8ac5_4b59_b624976def45de93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 E_PipettingSteps();
 // }} ""
-// {{ 7 1 0 "c414691a_4241_4ad6_8167b16b8b1b8448" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+// {{ 8 1 0 "c414691a_4241_4ad6_8167b16b8b1b8448" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.InitCustomDialog( "c414691a_4241_4ad6_8167b16b8b1b8448" );
 customDialogCEBEF4F2B34042e6B1374AC5360EF2CF.ShowCustomDialog();
 // }} ""
-// {{{ 8 1 0 "c0682f02_ed92_4a02_80238c36dad60329" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 9 1 0 "c0682f02_ed92_4a02_80238c36dad60329" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 HSLHamHeaterShaker::Terminate();
 // }} ""
 // {{ 2 "AutoExitBlock" ""
@@ -324,4 +328,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-10-09 12:28$$checksum=9a22708e$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-10-29 09:48$$checksum=cf75136b$$length=083$$

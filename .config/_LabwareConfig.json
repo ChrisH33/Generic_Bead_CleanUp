@@ -27,7 +27,7 @@
             "offsets": [
                 0,
                 0,
-                -0.7
+                0
             ],
             "Offsets Relative to": "EppendorfTwinTEC96_Sanger",
             "Sanger_PO": "PLPL0067",
@@ -50,7 +50,7 @@
                 0,
                 3.4
             ],
-            "Offsets Relative to": "Cos_96_DW_2mL",
+            "Offsets Relative to": "Nunc_96_Well_Polypropylene_DeepWell",
             "Sanger_PO": "11594754",
             "link": "https://www.thermofisher.com/order/catalog/product/AB0932"
         }
@@ -69,9 +69,9 @@
             "offsets": [
                 0,
                 0,
-                0.9
+                0
             ],
-            "Offsets Relative to": "Cos_96_DW_2mL",
+            "Offsets Relative to": "Nunc_96_Well_Polypropylene_DeepWell",
             "Sanger_PO": "PLPL0092",
             "link": "https://www.fishersci.co.uk/shop/products/nunc-1-3-2-0ml-deepwell-plates-shared-wall-technology/10393262"
         }
@@ -83,39 +83,66 @@
                 0,
                 12
             ],
-            "Offsets Relative to": "Cos_96_DW_2mL",
+            "Offsets Relative to": "Nunc_96_Well_Polypropylene_DeepWell",
             "Sanger_PO": "PLRE0010",
             "link": "https://www.thermofisher.com/order/catalog/product/1200-1301"
         }
     ],
     "Alpaqua Magnum FLX - A000600": [
         {
-            "offsets": [
+            "Nunc 96-Well Polypropylene DeepWell - #260252 - offsets": [
                 0,
                 0,
                 11.7
             ],
-            "Offsets Relative to": "Cos_96_DW_2mL"
+            "Eppendorf twin.tec PCR Plate 96 - #0030128648 - offsets": [
+                0,
+                0,
+                11.7
+            ],
+            "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932 - offsets": [
+                0,
+                0,
+                11.7
+            ]
         }
     ],
     "Alpaqua 96S Super - A001322": [
         {
-            "offsets": [
+            "Nunc 96-Well Polypropylene DeepWell - #260252 - offsets": [
                 0,
                 0,
-                6
+                11.7
             ],
-            "Offsets Relative to": "Cos_96_DW_2mL"
+            "Eppendorf twin.tec PCR Plate 96 - #0030128648 - offsets": [
+                0,
+                0,
+                11.7
+            ],
+            "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932 - offsets": [
+                0,
+                0,
+                11.7
+            ]
         }
     ],
     "Alpaqua LE Magnet - A000350": [
         {
-            "offsets": [
+            "Nunc 96-Well Polypropylene DeepWell - #260252 - offsets": [
                 0,
                 0,
-                0
+                11.7
             ],
-            "Offsets Relative to": "Cos_96_DW_2mL"
+            "Eppendorf twin.tec PCR Plate 96 - #0030128648 - offsets": [
+                0,
+                0,
+                11.7
+            ],
+            "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932 - offsets": [
+                0,
+                0,
+                11.7
+            ]
         }
     ],
     "str3": [

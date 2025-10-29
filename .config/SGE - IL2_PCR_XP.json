@@ -20,7 +20,7 @@
                 "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"
             ],
             "Magnet_Type": [
-                "Alpaqua 96S Super - A001322"
+                "Alpaqua 96S Super - A001322", "Alpaqua Magnum FLX - A000600"
             ],
             "Waste_Reservoir_Type": [
                 "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932"
@@ -52,11 +52,6 @@
         "14. Incubate Beads + Eluate",
         "15. Pulldown Beads",
         "16. Recover DNA"
-    ],
-    "Step1_Details": [
-        {
-            "Step_Description": "----- Dilute DNA -----"
-        }
     ],
     "Step2_Details": [
         {
@@ -117,26 +112,6 @@
         {
             "Step_Description": "----- Pulldown DNA -----",
             "intDNAPulldownTime": 150
-        }
-    ],
-    "Step6_Details": [
-        {
-            "Step_Description": "----- Transfer Beads #2 -----"
-        }
-    ],
-    "Step7_Details": [
-        {
-            "Step_Description": "----- Transfer Supernatant -----"
-        }
-    ],
-    "Step8_Details": [
-        {
-            "Step_Description": "----- Incubate DNA + Beads #2 -----"
-        }
-    ],
-    "Step9_Details": [
-        {
-            "Step_Description": "----- Pulldown DNA #2 -----"
         }
     ],
     "Step10_Details": [
