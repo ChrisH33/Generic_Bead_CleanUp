@@ -2824,10 +2824,10 @@ _TimerSettings(tmrEthanolDelay, 0, Translate("Ethanol Wash Time"));
 	arrRetValues = ML_STAR._827392A0_B7E8_4472_9ED3_B45B71B5D27A("4baa9995_2796_42b2_8636b4216dc9e8e2"); // Head96Aspirate
 }
 // }} ""
-// {{ 959 1 0 "b6795d88_6ab2_4d59_b6bdce907e62b631" "ML_STAR:{A48573A5-62ED-4951-9EF9-03207EFE34FB}"
+// {{ 959 1 0 "d495abff_4765_4105_91c8a55f0f688620" "ML_STAR:{A48573A5-62ED-4951-9EF9-03207EFE34FB}"
 {
 	variable arrRetValues[];
-	arrRetValues = ML_STAR._A48573A5_62ED_4951_9EF9_03207EFE34FB("b6795d88_6ab2_4d59_b6bdce907e62b631"); // Head96Dispense
+	arrRetValues = ML_STAR._A48573A5_62ED_4951_9EF9_03207EFE34FB("d495abff_4765_4105_91c8a55f0f688620"); // Head96Dispense
 }
 // }} ""
 // {{ 960 1 0 "1844d2cb_62b8_462c_97f837ad59896ae4" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
@@ -6359,4 +6359,4 @@ TRACELEVEL::Trace_02(TRACE_LEVEL_DEBUG, Translate("-- Skipping Tip Eject"), Tran
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=ch33$$valid=0$$time=2025-10-29 11:13$$checksum=fc68fb49$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-10-29 11:46$$checksum=d137ae0e$$length=083$$
