@@ -1,8 +1,8 @@
 {
     "Approved Workflows": [
         "SGE - IL2_PCR_XP",
-        "Ultima Bakeoff",
-        "RNA_SPRI_v1"
+        "RNA_SPRI_v1",
+        "R&D Cleanup - Standard SingleSided"
     ],
     "Every Step": [
         "01. Dilute DNA",

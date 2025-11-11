@@ -2,7 +2,7 @@
     "Labware_Details": [{
         "Source_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
         "Destination_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
-        "Bead_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648"],
+        "Bead_Plate_Type": ["Eppendorf twin.tec PCR Plate 96 - #0030128648","Nunc 96-Well Polypropylene DeepWell - #260252"],
         "EtOH_Reservoir_Type": ["Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
         "Elution_Reservoir_Type": ["Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"],
         "Magnet_Type": ["Alpaqua 96S Super - A001322", "Alpaqua Magnum FLX - A000600"],
@@ -12,7 +12,7 @@
         "intMaxPlateThroughput": 2,
         "strTipType": "300uLNTRs",
         "strPipettingTool": "96MPH",
-        "intTipRequired": 576
+        "intTipsRequired": 576
     }],
     "Steps To Run": [
         "",
@@ -39,10 +39,10 @@
         "strBeadType": "SPRISelect",
         "strLC_Bead": "DNAP_Tip_300ul_96COREHead_SPRI_Beads_DispenseSurface_Empty",
         "blnBead_Eject": true,
-        "intBead_AspLLD": 0, "intBead_AspSubmerge": 0, "intBead_AspHeight": 0.8, "intBead_AspRetract": 16,
+        "intBead_AspLLD": 0, "intBead_AspSubmerge": 0, "intBead_AspHeight": 1, "intBead_AspRetract": 25,
         "intBead_AspFollowing": 0, "intBead_AspMixCycles": 0, "intBead_AspMixVolume": 0,
-        "intBead_DispLLD": 0, "intBead_DispSubmerge": 0, "intBead_DispHeight": 1, "intBead_DispRetract": 5,
-        "intBead_DispFollowing": 0, "intBead_DispMixCycles": 30, "intBead_DispMixVolume": 70
+        "intBead_DispLLD": 0, "intBead_DispSubmerge": 0, "intBead_DispHeight": 1.8, "intBead_DispRetract": 5,
+        "intBead_DispFollowing": 1, "intBead_DispMixCycles": 30, "intBead_DispMixVolume": 70
     }],
     "Step4_Details": [{
         "Step_Description": "----- Incubate DNA + Beads -----",
@@ -58,7 +58,7 @@
         "blnRetainSupernatant": false,
         "intSupernatantVolume": 89,
         "strLC_Sup": "DNAP_Tip_300ul_96COREHead_Supernatant_Removal_DispenseSurface_Empty",
-        "intSup_AspLLD": 0, "intSup_AspSubmerge": 0, "intSup_AspHeight": 0.3, "intSup_AspRetract": 5,
+        "intSup_AspLLD": 0, "intSup_AspSubmerge": 0, "intSup_AspHeight": 0.5, "intSup_AspRetract": 5,
         "intSup_AspFollowing": 1, "intSup_AspMixCycles": 0, "intSup_AspMixVolume": 0,
         "intSup_DispLLD": 0, "intSup_DispSubmerge": 0, "intSup_DispHeight": 15, "intSup_DispRetract": 5,
         "intSup_DispFollowing": 0, "intSup_DispMixCycles": 0, "intSup_DispMixVolume": 0
@@ -74,10 +74,10 @@
         "intEtOH_DispLLD": 0, "intEtOH_DispSubmerge": 0, "intEtOH_DispHeight": 10, "intEtOH_DispRetract": 5,
         "intEtOH_DispFollowing": 0, "intEtOH_DispMixCycles": 0, "intEtOH_DispMixVolume": 0,
         "intEthanolRemovalVolume": 190,
-        "strLC_Wash": "DNAP_Tip_300ul_96COREHead_Supernatant_Removal_DispenseSurface_Empty",
+        "strLC_Wash": "DNAP_Tip_300ul_96COREHead_EtOH_Removal",
         "intWash_AspLLD": 0, "intWash_AspSubmerge": 0, "intWash_AspHeight": 0.3, "intWash_AspRetract": 5,
         "intWash_AspFollowing": 1, "intWash_AspMixCycles": 0, "intWash_AspMixVolume": 0,
-        "intWash_DispLLD": 0, "intWash_DispSubmerge": 0, "intWash_DispHeight": 15, "intWash_DispRetract": 5,
+        "intWash_DispLLD": 0, "intWash_DispSubmerge": 0, "intWash_DispHeight": 3, "intWash_DispRetract": 5,
         "intWash_DispFollowing": 0, "intWash_DispMixCycles": 0, "intWash_DispMixVolume": 0
     }],
     "Step12_Details": [{
@@ -96,7 +96,7 @@
         "intEluateVolumeNotes": "Volume should be 20",
         "intEluate_AspLLD": 0, "intEluate_AspSubmerge": 0, "intEluate_AspHeight": 1, "intEluate_AspRetract": 25,
         "intEluate_AspFollowing": 0, "intEluate_AspMixCycles": 0, "intEluate_AspMixVolume": 0,
-        "intEluate_DispLLD": 0, "intEluate_DispSubmerge": 0, "intEluate_DispHeight": 1.2, "intEluate_DispRetract": 5,
+        "intEluate_DispLLD": 0, "intEluate_DispSubmerge": 0, "intEluate_DispHeight": 1.5, "intEluate_DispRetract": 5,
         "intEluate_DispFollowing": 0, "intEluate_DispMixCycles": 15, "intEluate_DispMixVolume": 22
     }],
     "Step14_Details": [{

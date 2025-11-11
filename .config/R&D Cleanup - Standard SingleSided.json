@@ -11,19 +11,25 @@
                 "Eppendorf twin.tec PCR Plate 96 - #0030128648"
             ],
             "Bead_Plate_Type": [
-                "Nunc 96-Well Polypropylene DeepWell - #260252"
+                "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932",
+                "Nunc 96-Well Polypropylene DeepWell - #260252",
+                "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"
             ],
             "EtOH_Reservoir_Type": [
+                "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932",
                 "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"
             ],
             "Elution_Reservoir_Type": [
+                "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932",
                 "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"
             ],
             "Magnet_Type": [
-                "Alpaqua 96S Super - A001322", "Alpaqua Magnum FLX - A000600"
+                "Alpaqua 96S Super - A001322",
+                "Alpaqua Magnum FLX - A000600"
             ],
             "Waste_Reservoir_Type": [
-                "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932"
+                "Abgene 96 Well 2.2mL Polypropylene DeepWell - #AB0932",
+                "Nalgene Disposable Polypropylene Robotic Reservoirs - #1200-1301"
             ]
         }
     ],
@@ -168,7 +174,7 @@
             "intWash_AspMixVolume": 0,
             "intWash_DispLLD": 0,
             "intWash_DispSubmerge": 0,
-            "intWash_DispHeight": 3,
+            "intWash_DispHeight": 1.5,
             "intWash_DispRetract": 5,
             "intWash_DispFollowing": 0,
             "intWash_DispMixCycles": 0,
@@ -232,7 +238,7 @@
             "intRecoveryVolume": 30,
             "intRecovery_AspLLD": 0,
             "intRecovery_AspSubmerge": 0,
-            "intRecovery_AspHeight": 0.3,
+            "intRecovery_AspHeight": 0.2,
             "intRecovery_AspRetract": 5,
             "intRecovery_AspFollowing": 0,
             "intRecovery_AspMixCycles": 0,

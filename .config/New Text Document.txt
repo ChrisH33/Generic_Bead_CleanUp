@@ -1,2 +1,0 @@
-Remove fake timer visibility
-Add pause/dab on the ethanol to waste transfer
