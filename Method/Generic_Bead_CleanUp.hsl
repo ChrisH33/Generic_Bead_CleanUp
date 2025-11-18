@@ -13,6 +13,7 @@
  namespace _Method { #include "HSLDeckVisualize.hsl" } 
  namespace _Method { #include "HSLFileDirectoryLib.hsl" } 
 #include "Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.res"
+ namespace _Method { #include "HSLErrLib.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 variable o_intTraceLevel;
@@ -25,7 +26,6 @@ variable o_arrPossibleLabware_Bind[];
 variable o_arrPossibleLabware_Waste[];
 variable o_arrPossibleLabware_Src[];
 variable o_strConfigPath_Labware;
-variable o_arrCurrentWorkflowSteps[];
 dialog customDialogCEBEF4F2B34042e6B1374AC5360EF2CF;
 variable o_blnSimMode;
 variable o_strLabware_Dest;
@@ -120,7 +120,6 @@ variable o_intBind_Temp;
 variable o_intBeadDryingTime;
 variable o_blnEluateOnMagnet;
 variable o_blnBead_Eject;
-variable o_strBead2Type;
 variable o_intWash_AspRetract;
 variable o_intSup_AspLLD;
 variable o_intSup_AspFollowing;
@@ -226,7 +225,6 @@ variable o_intSup_AspHeight;
 variable o_intSupTrans_DispSubmerge;
 variable o_intSupTrans_DispFollowing;
 variable o_intSupTrans_AspRetract;
-variable o_intMaxPlateThroughput;
 variable o_intDNA_DispMixVolume;
 variable o_intDNA_DispMixCycles;
 variable o_blnDryOnDeck;
@@ -242,7 +240,6 @@ variable o_intBead_DispMixVolume;
 variable o_intBead_DispMixCycles;
 variable o_intBead_DispLLD;
 variable o_blnTopUp_Eject;
-variable o_strBeadType;
 variable o_intTopUpVolume;
 variable o_intSupTrans_AspLLD;
 variable o_intEtOH_AspMixVolume;
@@ -251,9 +248,38 @@ variable o_intEluate_DispLLD;
 variable o_strTipCounter;
 sequence seqTipRacks;
 sequence seqWasteRacks;
-variable blnTipsOn;
 variable o_strConfigPath_CurrentWorkflow;
 variable o_intEthanolRemovalVolume;
+variable o_arrBinaryCurrentWorkflow[];
+variable o_intTipRacksRequired;
+variable o_blnBind_PressPlate;
+variable o_blnPulldown2_PlatePress;
+variable o_blnPulldown2_CheckPlate;
+variable o_blnBind2_PlatePress;
+variable o_blnDrying_PlatePress;
+variable o_blnDrying_CheckPlate;
+variable o_blnBind2_CheckPlate;
+variable o_blnBind_CheckPlate;
+variable o_blnPulldown_PlatePress;
+variable o_blnElute_CheckPlate;
+variable o_blnElute_PlatePress;
+variable o_blnPulldown_CheckPlate;
+variable int;
+variable o_blnBind_PlatePress;
+variable o_blnSupTrans_PressPlate;
+variable o_blnSupTrans_CheckPlate;
+variable o_blnBind2_PressPlate;
+variable o_blnEtOH_PressPlate;
+variable o_blnEtOH_CheckPlate;
+variable o_blnDry_CheckPlate;
+variable o_intDry_PressPlate;
+variable o_blnDry_PlatePress;
+variable o_blnRecovery_CheckPlate;
+variable o_blnDNAPulldown_CheckPlate;
+variable o_blnRecovery_PressPlate;
+variable o_blnDNAPulldown_PressPlate;
+variable o_blnEluate_CheckPlate;
+variable o_blnEluate_PlatePress;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -329,4 +355,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-10-30 09:00$$checksum=f8b123e5$$length=083$$
+// $$author=ch33$$valid=0$$time=2025-11-18 09:59$$checksum=95ad33fa$$length=083$$

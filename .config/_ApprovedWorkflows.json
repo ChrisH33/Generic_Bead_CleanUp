@@ -1,8 +1,9 @@
 {
     "Approved Workflows": [
+        "FullWorkflow_Template",
         "SGE - IL2_PCR_XP",
         "RNA_SPRI_v1",
-        "R&D Cleanup - Standard SingleSided"
+        "R&D Cleanup - Standard SingleSided"        
     ],
     "Every Step": [
         "01. Dilute DNA",
