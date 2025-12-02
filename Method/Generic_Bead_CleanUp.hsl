@@ -252,19 +252,13 @@ variable o_strConfigPath_CurrentWorkflow;
 variable o_intEthanolRemovalVolume;
 variable o_arrBinaryCurrentWorkflow[];
 variable o_intTipRacksRequired;
-variable o_blnBind_PressPlate;
 variable o_blnPulldown2_PlatePress;
 variable o_blnPulldown2_CheckPlate;
-variable o_blnBind2_PlatePress;
-variable o_blnDrying_PlatePress;
-variable o_blnDrying_CheckPlate;
 variable o_blnBind2_CheckPlate;
 variable o_blnBind_CheckPlate;
 variable o_blnPulldown_PlatePress;
-variable o_blnElute_CheckPlate;
 variable o_blnElute_PlatePress;
 variable o_blnPulldown_CheckPlate;
-variable int;
 variable o_blnBind_PlatePress;
 variable o_blnSupTrans_PressPlate;
 variable o_blnSupTrans_CheckPlate;
@@ -355,4 +349,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=ch33$$valid=0$$time=2025-11-18 09:59$$checksum=95ad33fa$$length=083$$
+// $$author=Hamilton$$valid=0$$time=2025-12-02 15:30$$checksum=6d7048a5$$length=087$$
