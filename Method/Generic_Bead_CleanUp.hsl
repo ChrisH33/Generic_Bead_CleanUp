@@ -14,6 +14,7 @@
  namespace _Method { #include "HSLFileDirectoryLib.hsl" } 
 #include "Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.res"
  namespace _Method { #include "HSLErrLib.hsl" } 
+ namespace _Method { #include "Hamilton DriverTools\\Hamilton DriverTools.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 global device ML_STAR ("Generic_Bead_CleanUp\\Deck Layout\\Bead_CleanUp_v1.lay", "ML_STAR", hslTrue);
 variable o_intTraceLevel;
@@ -349,4 +350,4 @@ CHECKCARRIERPRESENCEABSENCE::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=Hamilton$$valid=0$$time=2025-12-02 15:30$$checksum=6d7048a5$$length=087$$
+// $$author=Hamilton$$valid=0$$time=2025-12-10 13:19$$checksum=72a23ed9$$length=087$$
