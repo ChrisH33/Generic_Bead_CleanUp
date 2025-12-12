@@ -16,7 +16,7 @@
     "Eppendorf twin.tec PCR Plate 96 - #0030128648": [
         {
             "intGripHeight": 5,
-            "intGripWidth": 79,
+            "intGripWidth": 80,
             "intGripWidthOpen": 85,
             "intGripForce": 5,
             "intGripSpeed": 277.8,
@@ -175,7 +175,7 @@
                     "offsets": [
                         0,
                         0,
-                        0
+                        0.3
                     ]
                 }
             ],
