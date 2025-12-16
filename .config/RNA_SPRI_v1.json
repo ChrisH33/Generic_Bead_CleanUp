@@ -60,7 +60,7 @@
         {
             "Step_Description": "----- Transfer Beads -----",
             "blnSourcePlateCleanup": true,
-            "intBeadVolume": 41,
+            "intBeadVolume": 40,
             "strLC_Bead": "WSI_300ul_96MPH_SPRIAddition_DispenseSurface_Empty",
             "strBeadType": "SPRISelect",
             "blnBead_Eject": true,
