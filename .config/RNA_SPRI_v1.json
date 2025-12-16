@@ -60,35 +60,34 @@
         {
             "Step_Description": "----- Transfer Beads -----",
             "blnSourcePlateCleanup": true,
-            "intBeadVolume": 41,
-            "strLC_Bead": "WSI_300ul_96MPH_SPRIAddition_DispenseSurface_Empty",
+            "intBeadVolume": 40,
             "strBeadType": "SPRISelect",
+            "strLC_Bead": "WSI_300ul_96MPH_SPRIAddition_DispenseSurface_Empty",
             "blnBead_Eject": true,
-            "str_1": "--- Aspirate Settings ---",
             "intBead_AspHeight": 0.1,
             "intBead_AspRetract": 10,
             "intBead_AspMixCycles": 5,
             "intBead_AspMixVolume": 30,
-            "intBead_AspFollowing": 0,
-            "intBead_AspLLD": 0,
-            "intBead_AspSubmerge": 0,
-            "str_2": "--- Dispense Settings ---",
             "intBead_DispHeight": 0.5,
             "intBead_DispRetract": 5,
             "intBead_DispMixCycles": 30,
             "intBead_DispMixVolume": 80,
+            "str": "------------------------------",
+            "intBead_AspFollowing": 0,
             "intBead_DispFollowing": 0,
             "intBead_DispLLD": 0,
-            "intBead_DispSubmerge": 0
+            "intBead_DispSubmerge": 0,
+            "intBead_AspLLD": 0,
+            "intBead_AspSubmerge": 0
         }
     ],
     "Step4_Details": [
         {
             "Step_Description": "----- Incubate DNA + Beads -----",
             "intDNABindTime": 300,
-            "str_1": "--- HHS Settings ---",
             "blnBindOnHHS": true,
             "intBind_Shake": 500,
+            "str": "------------------------------",
             "intBind_Temp": 0,
             "blnBind_CheckPlate": 0,
             "blnBind_PlatePress": 0
@@ -98,6 +97,7 @@
         {
             "Step_Description": "----- Pulldown DNA -----",
             "intDNAPulldownTime": 180,
+            "str": "------------------------------",
             "blnPulldown_CheckPlate": 0,
             "blnPulldown_PlatePress": 0
         }
