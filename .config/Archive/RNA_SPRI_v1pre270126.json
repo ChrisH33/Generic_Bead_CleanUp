@@ -31,7 +31,7 @@
     ],
     "Processing_Details": [
         {
-            "intMaxPlateThroughput": 2,
+            "intMaxPlateThroughput": 1,
             "intTipRacksRequired": 6,
             "strTipCounter": "TipCounter_300uLNTR"
         }
@@ -60,7 +60,7 @@
             "blnSourcePlateCleanup": true,
             "intBeadVolume": 40,
             "intBeadVolumeToLoad": 60,
-            "strLC_Bead": "WSI_300ul_96MPH_SPRIAddition_DispenseSurface_Empty_V2",
+            "strLC_Bead": "WSI_300ul_96MPH_SPRIAddition_DispenseSurface_Empty",
             "blnBead_Eject": true,
             "str_Asp": "----------- Aspirate Settings -----",
             "intBead_AspLLD": 0,
@@ -76,7 +76,7 @@
             "intBead_DispHeight": 0.5,
             "intBead_DispRetract": 5,
             "intBead_DispFollowing": 0,
-            "intBead_DispMixCycles": 60,
+            "intBead_DispMixCycles": 30,
             "intBead_DispMixVolume": 80
         }
     ],
@@ -84,9 +84,9 @@
         {
             "Step_Description": "===== Incubate DNA + Beads =====",
             "intDNABindTime": 300,
-            "blnBindOnHHS": false,
+            "blnBindOnHHS": true,
             "intBind_Temp": 0,
-            "intBind_Shake": 0,
+            "intBind_Shake": 500,
             "blnBind_PlatePress": false,
             "blnBind_CheckPlate": false
         }
